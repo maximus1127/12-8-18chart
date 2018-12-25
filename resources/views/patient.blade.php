@@ -17,11 +17,12 @@
     height: 100%;
     width: 100%;
 
+
   }
 
   img {
      margin-bottom: 0 !important;
-     padding-top: 40px !important;
+     padding-top: 20px !important;
    }
 
   .inverted {
@@ -51,6 +52,8 @@
     width: 100%;
     height: 90%;
     display: table;
+    align-content: center;
+
     top: 3%;
     bottom: 0;
     left: 0;
@@ -71,91 +74,163 @@
   .tumble400 img {
 
     height: 2000%;
-    margin-left: 35px;
-    margin-right: 35px;
-      margin-bottom: 40px;
+
   }
 
   .tumble300 img {
 
     height: 1500%;
-    margin-left: 35px;
-    margin-right: 35px;;
-       margin-bottom: 40px;
+
   }
 
   .tumble200 img {
 
     height: 1000%;
-    margin-left: 35px;
-    margin-right: 35px;
-       margin-bottom: 40px;
+
   }
 
   .tumble100 img {
 
-    height: 500%;
-    margin-left: 35px;
-    margin-right: 35px;
-       margin-bottom: 40px;
+
   }
 
   .tumble80 img {
 
     height: 400%;
-    margin-left: 35px;
-    margin-right: 35px;
-       margin-bottom: 40px;
+
   }
 
   .tumble70 img {
 
     height: 350%;
-    margin-left: 35px;
-    margin-right: 35px;
-       margin-bottom: 40px;
+
   }
 
   .tumble60 img {
     height: 300%;
-    margin-right: 35px;
-    margin-left: 35px;
-       margin-bottom: 40px;
+
   }
 
   .tumble50 img {
     height: 250%;
-    margin-right: 35px;
-    margin-left: 35px;
-       margin-bottom: 40px;
+
   }
 
   .tumble40 img {
     height: 200%;
-    margin-right: 35px;
-    padding-left: 35px;
-       margin-bottom: 40px;
+
   }
 
   .tumble30 img {
     height: 150%;
-    margin-right: 35px;
-    padding-left: 35px;
-       margin-bottom: 40px;
+  padding: .15em .15em;
   }
 
   .tumble25 img {
     height: 125%;
-    margin-right: 35px;
-    padding-left: 35px;
-       margin-bottom: 40px;
+  padding: .125em .125em;
   }
 
   .tumble20 img {
-    margin-right: 35px;
+
     height: 100%;
-    margin-left: 35px;
-       margin-bottom: 40px;
+    padding: .1em .1em;
+  }
+
+/* ------------------------------------------------------------------------------------------------ */
+
+  .tumble400 {
+
+    font-size: 2000%;
+
+  }
+
+  .tumble300 {
+
+    font-size: 1500%;
+
+  }
+
+  .tumble200 {
+
+    font-size: 1000%;
+    letter-spacing: .3em;
+
+  }
+
+  .tumble100 {
+    text-align: center;
+padding: 20px 0;
+margin: 0;
+    font-size: 500%;
+    letter-spacing: .2em;
+
+  }
+
+  .tumble80 {
+    padding: 20px 0;
+    margin: 0;
+    font-size: 400%;
+    letter-spacing: .35em;
+
+  }
+
+  .tumble70 {
+    padding: 20px 0;
+    margin: 0;
+    font-size: 350%;
+    letter-spacing: .3em;
+  }
+
+  .tumble60 {
+    padding: 20px 20px;
+    margin: 0;
+    font-size: 300%;
+    letter-spacing: .3em;
+
+
+  }
+
+  .tumble50 {
+    padding: 20px 20px;
+    margin: 0;
+    font-size: 250%;
+    letter-spacing: .25em;
+
+
+  }
+
+  .tumble40 {
+    padding: 20px 20px;
+    margin: 0;
+    font-size: 200%;
+    letter-spacing: .2em;
+;
+  }
+
+  .tumble30 {
+    padding: 20px 20px;
+    margin: 0;
+    font-size: 150%;
+    letter-spacing: .15em;
+
+  }
+
+  .tumble25 {
+    padding: 20px 20px;
+    margin: 0;
+    font-size: 125%;
+    letter-spacing: .125em;
+
+
+  }
+
+  .tumble20 {
+    padding: 20px 20px;
+    margin: 0;
+    font-size: 100%;
+    letter-spacing: .1em;
+
   }
 
 
@@ -194,6 +269,17 @@
       line-height: 20px;
     }
 
+    @font-face{
+font-family: 'Sloan';
+src: url('/font/Sloan.ttf') format('truetype');
+}
+
+
+.text{
+font-family: 'Sloan';
+
+}
+
 
 
 
@@ -209,48 +295,17 @@
 
 
 <div id="testDisplay">
-<div id="content">
+  <div id="content" class="text">
 
 
-  <div id="patient1" class="noFlow">
-    <img src="" id="oneone" />
-    <img src="" id="onetwo" />
-    <img src="" id="onethree" />
-    <img src="" id="onefour" />
-    <img src="" id="onefive" />
+    <div id="patient1" class="noFlow"></div>
+    <div id="patient2" class="noFlow"></div>
+    <div id="patient3" class="noFlow"></div>
+    <div id="patient4" class="noFlow"></div>
+    <div id="patient5" class="noFlow"></div>
+    <div id="patient6" class="noFlow"></div>
+
   </div>
-  <div id="patient2" class="noFlow">
-    <img src="" id="twoone" />
-    <img src="" id="twotwo" />
-    <img src="" id="twothree" />
-    <img src="" id="twofour" />
-    <img src="" id="twofive" /></div>
-  <div id="patient3" class="noFlow">
-    <img src="" id="threeone" />
-    <img src="" id="threetwo" />
-    <img src="" id="threethree" />
-    <img src="" id="threefour" />
-    <img src="" id="threefive" /></div>
-  <div id="patient4" class="noFlow">
-    <img src="" id="fourone" />
-    <img src="" id="fourtwo" />
-    <img src="" id="fourthree" />
-    <img src="" id="fourfour" />
-    <img src="" id="fourfive" /></div>
-  <div id="patient5" class="noFlow">
-    <img src="" id="fiveone" />
-    <img src="" id="fivetwo" />
-    <img src="" id="fivethree" />
-    <img src="" id="fivefour" />
-    <img src="" id="fivefive" /></div>
-  <div id="patient6" class="noFlow">
-    <img src="" id="sixone" />
-    <img src="" id="sixtwo" />
-    <img src="" id="sixthree" />
-    <img src="" id="sixfour" />
-    <img src="" id="sixfive" /></div>
-
-</div>
 
 
 
@@ -489,25 +544,23 @@ Here we have the sizes of the 20/20 lines that you need to configure for each ex
 <script src="/js/popper.min.js"></script>
 <script>
 function clear(){
-
-  $("*img").attr('src', '');
-  $("*img").css("display", "none");
-  $("#patient1").css("display", "none");
-  $("#patient2").css("display", "none");
-  $("#patient3").css("display", "none");
-  $("#patient4").css("display", "none");
-  $("#patient5").css("display", "none");
-  $("#patient6").css("display", "none");
+  $("#patient1").html("").removeClass();
+  $("#patient2").html("").removeClass();
+  $("#patient3").html("").removeClass();
+  $("#patient4").html("").removeClass();
+  $("#patient5").html("").removeClass();
+  $("#patient6").html("").removeClass();
 }
 
 
-var currentZoom;
-var letters = ["C.png", "D.png", "H.png", "K.png", "N.png", "O.png", "R.png", "S.png", "V.png", "Z.png"];
+var currentZoom = 20;
+var letters = ["C", "D", "H", "K", "N", "O", "R", "S", "V", "Z"];
 var numbersImg = ["1.png", "2.png", "3.png", "4.png", "5.png", "6.png", "7.png", "8.png", "9.png" , "5.png"];
 var ees = ["Down.png","Up.png","Left.png","Right.png", "Down.png","Up.png","Left.png","Right.png","Left.png","Right.png"];
 var pictures = ["Phone.png", "Horse.png", "Car.png", "Hand.png", "Bird.png", "Cake.png", "Phone.png", "Horse.png", "Car.png", "Hand.png", "Bird.png", "Cake.png"];
 var image = letters;
 var singleLetter = false;
+var fontType = true;
 var socket = io('http://' + location.hostname + ':8000');
 socket.on('private-default:App\\Events\\EventWasTriggered', function(data){
 
@@ -536,422 +589,335 @@ socket.on('private-default:App\\Events\\EventWasTriggered', function(data){
 
   if(size == 20){
     clear();
-    $("#patient1").css("display", "block");
     firstLine.className = ("tumble20");
-    if (singleLetter == true){
-      $("#oneone").attr("src", "/images/" + image[numbers[1]]).show();
-    //  $('#patient1').html("<img src='/images/" + image[numbers[1]] + "'/> " );
-    } else {
-      $("#oneone").attr("src", "/images/" + image[numbers[1]]).show();
-      $("#onetwo").attr("src", "/images/" + image[numbers[2]]).show();
-      $("#onethree").attr("src", "/images/" + image[numbers[3]]).show();
-      $("#onefour").attr("src", "/images/" + image[numbers[4]]).show();
-      $("#onefive").attr("src", "/images/" + image[numbers[0]]).show();
-   //$("#patient1").html("<img src='/images/" + image[numbers[1]] + "'/> <img src='/images/" + image[numbers[2]] + "' /> <img src='/images/" + image[numbers[3]] + "' /> <img src='/images/" + image[numbers[4]] + "' /> <img src='/images/" + image[numbers[0]] + "' />" );
+    if (singleLetter == true && fontType == false){
+    $('#patient1').html("<img src='/images/" + image[numbers[1]] + "'/> " );
+  } if (singleLetter == true && fontType == true){
+    $("#patient1").html(image[numbers[1]]);
+  } if(singleLetter == false && fontType == false){
+   $("#patient1").html("<img src='/images/" + image[numbers[1]] + "'/> <img src='/images/" + image[numbers[2]] + "' /> <img src='/images/" + image[numbers[3]] + "' /> <img src='/images/" + image[numbers[4]] + "' /> <img src='/images/" + image[numbers[0]] + "' />" );
+ } if (singleLetter == false && fontType == true){
+   $("#patient1").html( image[numbers[1]] +" "+  image[numbers[2]] + " " + image[numbers[3]] + " " +  image[numbers[4]] + " " + image[numbers[0]]);
  }
+
    $("h2").html("20/"+size);
   }
   if(size == 25){
     clear();
-    $("#patient1").css("display", "block");
     firstLine.className = ("tumble25");
-    if (singleLetter == true){
-      $("#oneone").attr("src", "/images/" + image[numbers[1]]).show();
-    //  $('#patient1').html("<img src='/images/" + image[numbers[1]] + "'/> " );
-    } else {
-      $("#oneone").attr("src", "/images/" + image[numbers[1]]).show();
-      $("#onetwo").attr("src", "/images/" + image[numbers[2]]).show();
-      $("#onethree").attr("src", "/images/" + image[numbers[3]]).show();
-      $("#onefour").attr("src", "/images/" + image[numbers[4]]).show();
-      $("#onefive").attr("src", "/images/" + image[numbers[0]]).show();
-   //$("#patient1").html("<img src='/images/" + image[numbers[1]] + "'/> <img src='/images/" + image[numbers[2]] + "' /> <img src='/images/" + image[numbers[3]] + "' /> <img src='/images/" + image[numbers[4]] + "' /> <img src='/images/" + image[numbers[0]] + "' />" );
+    if (singleLetter == true && fontType == false){
+    $('#patient1').html("<img src='/images/" + image[numbers[1]] + "'/> " );
+  } if (singleLetter == true && fontType == true){
+    $("#patient1").html(image[numbers[1]]);
+  } if(singleLetter == false && fontType == false){
+   $("#patient1").html("<img src='/images/" + image[numbers[1]] + "'/> <img src='/images/" + image[numbers[2]] + "' /> <img src='/images/" + image[numbers[3]] + "' /> <img src='/images/" + image[numbers[4]] + "' /> <img src='/images/" + image[numbers[0]] + "' />" );
+ } if (singleLetter == false && fontType == true){
+   $("#patient1").html( image[numbers[1]] +" "+  image[numbers[2]] + " " + image[numbers[3]] + " " +  image[numbers[4]] + " " + image[numbers[0]]);
  }
   $("h2").html("20/"+size);
 
   }
   if(size == 30){
     clear();
-    $("#patient1").css("display", "block");
     firstLine.className = ("tumble30");
-    if (singleLetter == true){
-      $("#oneone").attr("src", "/images/" + image[numbers[1]]).show();
-    //  $('#patient1').html("<img src='/images/" + image[numbers[1]] + "'/> " );
-    } else {
-      $("#oneone").attr("src", "/images/" + image[numbers[1]]).show();
-      $("#onetwo").attr("src", "/images/" + image[numbers[2]]).show();
-      $("#onethree").attr("src", "/images/" + image[numbers[3]]).show();
-      $("#onefour").attr("src", "/images/" + image[numbers[4]]).show();
-      $("#onefive").attr("src", "/images/" + image[numbers[0]]).show();
-   //$("#patient1").html("<img src='/images/" + image[numbers[1]] + "'/> <img src='/images/" + image[numbers[2]] + "' /> <img src='/images/" + image[numbers[3]] + "' /> <img src='/images/" + image[numbers[4]] + "' /> <img src='/images/" + image[numbers[0]] + "' />" );
+    if (singleLetter == true && fontType == false){
+    $('#patient1').html(" <img src='/images/" + image[numbers[1]] + "'/> " );
+  } if (singleLetter == true && fontType == true){
+    $("#patient1").html(image[numbers[1]]);
+  } if(singleLetter == false && fontType == false){
+   $("#patient1").html("<img src='/images/" + image[numbers[1]] + "'/> <img src='/images/" + image[numbers[2]] + "' /> <img src='/images/" + image[numbers[3]] + "' /> <img src='/images/" + image[numbers[4]] + "' /> <img src='/images/" + image[numbers[0]] + "' />" );
+  } if (singleLetter == false && fontType == true){
+   $("#patient1").html( image[numbers[1]] +" "+  image[numbers[2]] + " " + image[numbers[3]] + " " +  image[numbers[4]] + " " + image[numbers[0]]);
   }
    $("h2").html("20/"+size);
 
   }
   if(size == 40){
     clear();
-    $("#patient1").css("display", "block");
     firstLine.className = ("tumble40");
-    if (singleLetter == true){
-      $("#oneone").attr("src", "/images/" + image[numbers[1]]).show();
-    //  $('#patient1').html("<img src='/images/" + image[numbers[1]] + "'/> " );
-    } else {
-      $("#oneone").attr("src", "/images/" + image[numbers[1]]).show();
-      $("#onetwo").attr("src", "/images/" + image[numbers[2]]).show();
-      $("#onethree").attr("src", "/images/" + image[numbers[3]]).show();
-      $("#onefour").attr("src", "/images/" + image[numbers[4]]).show();
-      $("#onefive").attr("src", "/images/" + image[numbers[0]]).show();
-   //$("#patient1").html("<img src='/images/" + image[numbers[1]] + "'/> <img src='/images/" + image[numbers[2]] + "' /> <img src='/images/" + image[numbers[3]] + "' /> <img src='/images/" + image[numbers[4]] + "' /> <img src='/images/" + image[numbers[0]] + "' />" );
+    if (singleLetter == true && fontType == false){
+    $('#patient1').html("<img src='/images/" + image[numbers[1]] + "'/> " );
+  } if (singleLetter == true && fontType == true){
+    $("#patient1").html(image[numbers[1]]);
+  } if(singleLetter == false && fontType == false){
+   $("#patient1").html("<img src='/images/" + image[numbers[1]] + "'/> <img src='/images/" + image[numbers[2]] + "' /> <img src='/images/" + image[numbers[3]] + "' /> <img src='/images/" + image[numbers[4]] + "' /> <img src='/images/" + image[numbers[0]] + "' />" );
+  } if (singleLetter == false && fontType == true){
+   $("#patient1").html( image[numbers[1]] +" "+  image[numbers[2]] + " " + image[numbers[3]] + " " +  image[numbers[4]] + " " + image[numbers[0]]);
   }
   $("h2").html("20/"+size);
 
   }
   if(size == 50){
     clear();
-    $("#patient1").css("display", "block");
     firstLine.className = ("tumble50");
-    if (singleLetter == true){
-      $("#oneone").attr("src", "/images/" + image[numbers[1]]).show();
-    //  $('#patient1').html("<img src='/images/" + image[numbers[1]] + "'/> " );
-    } else {
-      $("#oneone").attr("src", "/images/" + image[numbers[1]]).show();
-      $("#onetwo").attr("src", "/images/" + image[numbers[2]]).show();
-      $("#onethree").attr("src", "/images/" + image[numbers[3]]).show();
-      $("#onefour").attr("src", "/images/" + image[numbers[4]]).show();
-      $("#onefive").attr("src", "/images/" + image[numbers[0]]).show();
-   //$("#patient1").html("<img src='/images/" + image[numbers[1]] + "'/> <img src='/images/" + image[numbers[2]] + "' /> <img src='/images/" + image[numbers[3]] + "' /> <img src='/images/" + image[numbers[4]] + "' /> <img src='/images/" + image[numbers[0]] + "' />" );
+    if (singleLetter == true && fontType == false){
+    $('#patient1').html("<img src='/images/" + image[numbers[1]] + "'/> " );
+  } if (singleLetter == true && fontType == true){
+    $("#patient1").html(image[numbers[1]]);
+  } if(singleLetter == false && fontType == false){
+   $("#patient1").html("<img src='/images/" + image[numbers[1]] + "'/> <img src='/images/" + image[numbers[2]] + "' /> <img src='/images/" + image[numbers[3]] + "' /> <img src='/images/" + image[numbers[4]] + "' /> <img src='/images/" + image[numbers[0]] + "' />" );
+  } if (singleLetter == false && fontType == true){
+   $("#patient1").html( image[numbers[1]] +" "+  image[numbers[2]] + " " + image[numbers[3]] + " " +  image[numbers[4]] + " " + image[numbers[0]]);
   }
    $("h2").html("20/"+size);
 
   }
   if(size == 60){
     clear();
-    $("#patient1").css("display", "block");
     firstLine.className = ("tumble60");
-    if (singleLetter == true){
-      $("#oneone").attr("src", "/images/" + image[numbers[1]]).show();
-    //  $('#patient1').html("<img src='/images/" + image[numbers[1]] + "'/> " );
-    } else {
-      $("#oneone").attr("src", "/images/" + image[numbers[1]]).show();
-      $("#onetwo").attr("src", "/images/" + image[numbers[2]]).show();
-      $("#onethree").attr("src", "/images/" + image[numbers[3]]).show();
-      $("#onefour").attr("src", "/images/" + image[numbers[4]]).show();
-      $("#onefive").attr("src", "/images/" + image[numbers[0]]).show();
-   //$("#patient1").html("<img src='/images/" + image[numbers[1]] + "'/> <img src='/images/" + image[numbers[2]] + "' /> <img src='/images/" + image[numbers[3]] + "' /> <img src='/images/" + image[numbers[4]] + "' /> <img src='/images/" + image[numbers[0]] + "' />" );
+    if (singleLetter == true && fontType == false){
+    $('#patient1').html("<img src='/images/" + image[numbers[1]] + "'/> " );
+  } if (singleLetter == true && fontType == true){
+    $("#patient1").html(image[numbers[1]]);
+  } if(singleLetter == false && fontType == false){
+   $("#patient1").html("<img src='/images/" + image[numbers[1]] + "'/> <img src='/images/" + image[numbers[2]] + "' /> <img src='/images/" + image[numbers[3]] + "' /> <img src='/images/" + image[numbers[4]] + "' /> <img src='/images/" + image[numbers[0]] + "' />" );
+  } if (singleLetter == false && fontType == true){
+   $("#patient1").html( image[numbers[1]] +" "+  image[numbers[2]] + " " + image[numbers[3]] + " " +  image[numbers[4]] + " " + image[numbers[0]]);
   }
   $("h2").html("20/"+size);
 
   }
   if(size == 70){
     clear();
-    $("#patient1").css("display", "block");
     firstLine.className = ("tumble70");
-    if (singleLetter == true){
-      $("#oneone").attr("src", "/images/" + image[numbers[1]]).show();
-    //  $('#patient1').html("<img src='/images/" + image[numbers[1]] + "'/> " );
-    } else {
-      $("#oneone").attr("src", "/images/" + image[numbers[1]]).show();
-      $("#onetwo").attr("src", "/images/" + image[numbers[2]]).show();
-      $("#onethree").attr("src", "/images/" + image[numbers[3]]).show();
-      $("#onefour").attr("src", "/images/" + image[numbers[4]]).show();
-      $("#onefive").attr("src", "/images/" + image[numbers[0]]).show();
-   //$("#patient1").html("<img src='/images/" + image[numbers[1]] + "'/> <img src='/images/" + image[numbers[2]] + "' /> <img src='/images/" + image[numbers[3]] + "' /> <img src='/images/" + image[numbers[4]] + "' /> <img src='/images/" + image[numbers[0]] + "' />" );
- }
+    if (singleLetter == true && fontType == false){
+    $('#patient1').html("<img src='/images/" + image[numbers[1]] + "'/> " );
+  } if (singleLetter == true && fontType == true){
+    $("#patient1").html(image[numbers[1]]);
+  } if(singleLetter == false && fontType == false){
+   $("#patient1").html("<img src='/images/" + image[numbers[1]] + "'/> <img src='/images/" + image[numbers[2]] + "' /> <img src='/images/" + image[numbers[3]] + "' /> <img src='/images/" + image[numbers[4]] + "' /> <img src='/images/" + image[numbers[0]] + "' />" );
+  } if (singleLetter == false && fontType == true){
+   $("#patient1").html( image[numbers[1]] +" "+  image[numbers[2]] + " " + image[numbers[3]] + " " +  image[numbers[4]] + " " + image[numbers[0]]);
+  }
    $("h2").html("20/"+size);
 
   }
   if(size == 80){
     clear();
-    $("#patient1").css("display", "block");
     firstLine.className = ("tumble80");
-    if (singleLetter == true){
-      $("#oneone").attr("src", "/images/" + image[numbers[1]]).show();
-    //  $('#patient1').html("<img src='/images/" + image[numbers[1]] + "'/> " );
-    } else {
-      $("#oneone").attr("src", "/images/" + image[numbers[1]]).show();
-      $("#onetwo").attr("src", "/images/" + image[numbers[2]]).show();
-      $("#onethree").attr("src", "/images/" + image[numbers[3]]).show();
-      $("#onefour").attr("src", "/images/" + image[numbers[4]]).show();
-    //  $("#onefive").attr("src", "/images/" + image[numbers[0]]).show();
-   //$("#patient1").html("<img src='/images/" + image[numbers[1]] + "'/> <img src='/images/" + image[numbers[2]] + "' /> <img src='/images/" + image[numbers[3]] + "' /> <img src='/images/" + image[numbers[4]] + "' /> <img src='/images/" + image[numbers[0]] + "' />" );
- }
+    if (singleLetter == true && fontType == false){
+    $('#patient1').html("<img src='/images/" + image[numbers[1]] + "'/> " );
+  } if (singleLetter == true && fontType == true){
+    $("#patient1").html(image[numbers[1]]);
+  } if(singleLetter == false && fontType == false){
+   $("#patient1").html("<img src='/images/" + image[numbers[1]] + "'/> <img src='/images/" + image[numbers[2]] + "' /> <img src='/images/" + image[numbers[3]] + "' /> <img src='/images/" + image[numbers[4]] + "' />" );
+  } if (singleLetter == false && fontType == true){
+   $("#patient1").html( image[numbers[1]] +" "+  image[numbers[2]] + " " + image[numbers[3]] + " " +  image[numbers[4]]);
+  }
   $("h2").html("20/"+size);
 
   }
   if(size == 100){
     clear();
-    $("#patient1").css("display", "block");
     firstLine.className = ("tumble100");
-    if (singleLetter == true){
-      $("#oneone").attr("src", "/images/" + image[numbers[1]]).show();
-    //  $('#patient1').html("<img src='/images/" + image[numbers[1]] + "'/> " );
-    } else {
-      $("#oneone").attr("src", "/images/" + image[numbers[1]]).show();
-      $("#onetwo").attr("src", "/images/" + image[numbers[2]]).show();
-      $("#onethree").attr("src", "/images/" + image[numbers[3]]).show();
-      // $("#onefour").attr("src", "/images/" + image[numbers[4]]).show();
-      // $("#onefive").attr("src", "/images/" + image[numbers[0]]).show();
-   //$("#patient1").html("<img src='/images/" + image[numbers[1]] + "'/> <img src='/images/" + image[numbers[2]] + "' /> <img src='/images/" + image[numbers[3]] + "' /> <img src='/images/" + image[numbers[4]] + "' /> <img src='/images/" + image[numbers[0]] + "' />" );
+    if (singleLetter == true && fontType == false){
+    $('#patient1').html("<img src='/images/" + image[numbers[1]] + "'/> " );
+  } if (singleLetter == true && fontType == true){
+    $("#patient1").html(image[numbers[1]]);
+  } if(singleLetter == false && fontType == false){
+   $("#patient1").html("<img src='/images/" + image[numbers[1]] + "'/> <img src='/images/" + image[numbers[2]] + "' /> <img src='/images/" + image[numbers[3]] + "' />" );
+  } if (singleLetter == false && fontType == true){
+   $("#patient1").html( image[numbers[1]] +" "+  image[numbers[2]] + " " + image[numbers[3]]);
   }
    $("h2").html("20/"+size);
 
   }
   if(size == 200){
     clear();
-    $("#patient1").css("display", "block");
     firstLine.className = ("tumble200");
-    if (singleLetter == true){
-      $("#oneone").attr("src", "/images/" + image[numbers[1]]).show();
-    //  $('#patient1').html("<img src='/images/" + image[numbers[1]] + "'/> " );
-    } else {
-      $("#oneone").attr("src", "/images/" + image[numbers[1]]).show();
-      $("#onetwo").attr("src", "/images/" + image[numbers[2]]).show();
-      // $("#onethree").attr("src", "/images/" + image[numbers[3]]).show();
-      // $("#onefour").attr("src", "/images/" + image[numbers[4]]).show();
-      // $("#onefive").attr("src", "/images/" + image[numbers[0]]).show();
-   //$("#patient1").html("<img src='/images/" + image[numbers[1]] + "'/> <img src='/images/" + image[numbers[2]] + "' /> <img src='/images/" + image[numbers[3]] + "' /> <img src='/images/" + image[numbers[4]] + "' /> <img src='/images/" + image[numbers[0]] + "' />" );
-  }
+    if (singleLetter == true && fontType == false){
+    $('#patient1').html("<img src='/images/" + image[numbers[1]] + "'/> " );
+  } if (singleLetter == true && fontType == true){
+    $("#patient1").html(image[numbers[1]]);
+  } if(singleLetter == false && fontType == false){
+   $("#patient1").html("<img src='/images/" + image[numbers[1]] + "'/> <img src='/images/" + image[numbers[2]] + "'  />" );
+ } if (singleLetter == false && fontType == true){
+   $("#patient1").html( image[numbers[1]] +" "+  image[numbers[2]]);
+ }
+
   $("h2").html("20/"+size);
 
   }
   if(size == 300){
     clear();
-    $("#patient1").css("display", "block");
     firstLine.className = ("tumble300");
-    $("#oneone").attr("src", "/images/" + image[numbers[1]]).show();
-   //$("#patient1").html("<img src='/images/" + image[numbers[1]] + "'/> " );
+    if (singleLetter == true && fontType == false){
+    $('#patient1').html("<img src='/images/" + image[numbers[1]] + "'/> " );
+  } if (singleLetter == true && fontType == true){
+    $("#patient1").html(image[numbers[1]]);
+  } if(singleLetter == false && fontType == false){
+   $("#patient1").html("<img src='/images/" + image[numbers[1]] + "' />" );
+ } if (singleLetter == false && fontType == true){
+   $("#patient1").html( image[numbers[1]] );
+ }
    $("h2").html("20/"+size);
 
   }
   if(size == 400){
     clear();
-    $("#patient1").css("display", "block");
     firstLine.className = ("tumble400");
-      $("#oneone").attr("src", "/images/" + image[numbers[1]]).show();
-  //$("#patient1").html("<img src='/images/" + image[numbers[1]] + "'/> " );
+    if (singleLetter == true && fontType == false){
+    $('#patient1').html("<img src='/images/" + image[numbers[1]] + "'/> " );
+  } if (singleLetter == true && fontType == true){
+    $("#patient1").html(image[numbers[1]]);
+  } if(singleLetter == false && fontType == false){
+   $("#patient1").html("<img src='/images/" + image[numbers[1]] + "' />" );
+ } if (singleLetter == false && fontType == true){
+   $("#patient1").html( image[numbers[1]] );
+ }
   $("h2").html("20/"+size);
   }
 
  if (data.size == 400200 ){
    clear();
-   $("#patient1").css("display", "block");
-   $("#patient2").css("display", "block");
    firstLine.className = ("tumble400");
    secondLine.className = ("tumble200");
-   if (singleLetter == true){
-     $("#oneone").attr("src", "/images/" + image[numbers[1]]).show();
-     $("#twoone").attr("src", "/images/" + image[numbers[2]]).show();
-     //$('#patient1').html("<img src='/images/" + image[numbers[1]] + "'/> " );
-     //$('#patient2').html("<img src='/images/" + image[numbers[2]] + "'/> " );
-   } else {
-     $("#oneone").attr("src", "/images/" + image[numbers[1]]).show();
-     $("#twoone").attr("src", "/images/" + image[numbers2[0]]).show();
-     $("#twotwo").attr("src", "/images/" + image[numbers2[1]]).show();
-    //$('#patient1').html("<img src='/images/" + image[numbers[1]] + "'/> " );
-    //$("#patient2").html("<img src='/images/" + image[numbers2[0]] + "'/> <img src='/images/" + image[numbers2[1]] + "' />");
-  }
+   if (singleLetter == true && fontType == false){
+   $('#patient1').html("<img src='/images/" + image[numbers[1]] + "'/> " );
+ } if (singleLetter == true && fontType == true){
+   $("#patient1").html(image[numbers[1]]);
+ } if(singleLetter == false && fontType == false){
+  $("#patient1").html("<img src='/images/" + image[numbers[1]] + "' />" );
+     $("#patient2").html("<img src='/images/" + image[numbers2[0]] + "'/> <img src='/images/" + image[numbers2[1]] + "'  />" );
+} if (singleLetter == false && fontType == true){
+  $("#patient1").html("&nbsp;"+ image[numbers[1]] );
+     $("#patient2").html( "&nbsp"+image[numbers2[0]] +" "+  image[numbers2[1]]);
+}
     $("h2").html("20/400 <br /> 20/200");
 
   }
    if (data.size == 1008070 ){
      clear();
-     $("#patient1").css("display", "block");
-     $("#patient2").css("display", "block");
-     $("#patient3").css("display", "block");
-
      firstLine.className = ("tumble100");
      secondLine.className = ("tumble80");
      thirdLine.className = ("tumble70");
-     if (singleLetter == true){
-       $("#oneone").attr("src", "/images/" + image[numbers[1]]).show();
-       $("#twoone").attr("src", "/images/" + image[numbers[2]]).show();
-       $("#threeone").attr("src", "/images/" + image[numbers[3]]).show();
-
-       // $('#patient1').html("<img src='/images/" + image[numbers[1]] + "'/> " );
-       // $('#patient2').html("<img src='/images/" + image[numbers[2]] + "'/> " );
-       // $('#patient3').html("<img src='/images/" + image[numbers[3]] + "'/> " );
-     } else {
-       $("#oneone").attr("src", "/images/" + image[numbers[1]]).show();
-       $("#onetwo").attr("src", "/images/" + image[numbers[2]]).show();
-       $("#onethree").attr("src", "/images/" + image[numbers[3]]).show();
-
-       $("#twoone").attr("src", "/images/" + image[numbers2[0]]).show();
-       $("#twotwo").attr("src", "/images/" + image[numbers2[1]]).show();
-       $("#twothree").attr("src", "/images/" + image[numbers2[2]]).show();
-       $("#twofour").attr("src", "/images/" + image[numbers2[3]]).show();
-
-       $("#threeone").attr("src", "/images/" + image[numbers3[0]]).show();
-       $("#threetwo").attr("src", "/images/" + image[numbers3[1]]).show();
-       $("#threethree").attr("src", "/images/" + image[numbers3[2]]).show();
-       $("#threefour").attr("src", "/images/" + image[numbers3[3]]).show();
-       $("#threefive").attr("src", "/images/" + image[numbers3[4]]).show();
-
-    // $('#patient1').html("<img src='/images/" + image[numbers[1]] + "'/> <img src='/images/" + image[numbers[2]] + "' /> <img src='/images/" + image[numbers[3]] + "' /> " );
-    // $('#patient2').html("<img src='/images/" + image[numbers2[0]] + "'/> <img src='/images/" + image[numbers2[1]] + "' /> <img src='/images/" + image[numbers2[2]] + "' /> <img src='/images/" + image[numbers2[3]] + "' /> " );
-    // $('#patient3').html("<img src='/images/" + image[numbers3[0]] + "'/> <img src='/images/" + image[numbers3[1]] + "' /> <img src='/images/" + image[numbers3[2]] + "' /> <img src='/images/" + image[numbers3[3]] + "' /> <img src='/images/" + image[numbers3[4]] + "' />" );
+     if (singleLetter == true && fontType == false){
+     $('#patient1').html("<img src='/images/" + image[numbers[1]] + "'/> " );
+     $('#patient2').html("<img src='/images/" + image[numbers[2]] + "'/> " );
+     $('#patient3').html("<img src='/images/" + image[numbers[3]] + "'/> " );
+   } if (singleLetter == true && fontType == true){
+     $("#patient1").html(image[numbers[1]]);
+     $("#patient2").html(image[numbers[2]]);
+     $("#patient3").html(image[numbers[3]]);
+   } if(singleLetter == false && fontType == false){
+    $("#patient1").html("<img src='/images/" + image[numbers[1]] + "'/> <img src='/images/" + image[numbers[2]] + "' /> <img src='/images/" + image[numbers[3]] + "'/>" );
+       $("#patient2").html("<img src='/images/" + image[numbers2[0]] + "'/> <img src='/images/" + image[numbers2[1]] + "' /> <img src='/images/" + image[numbers2[2]] + "' /> <img src='/images/" + image[numbers2[3]] + "' />" );
+       $("#patient3").html("<img src='/images/" + image[numbers3[0]] + "'/> <img src='/images/" + image[numbers3[1]] + "' /> <img src='/images/" + image[numbers3[2]] + "' /> <img src='/images/" + image[numbers3[3]] + "' /> <img src='/images/" + image[numbers3[4]] + "' />" );
+  } if (singleLetter == false && fontType == true){
+    $("#patient1").html( "&nbsp"+image[numbers[1]] + " " + image[numbers[2]] + " "+ image[numbers[3]]);
+    $("#patient2").html( "&nbsp"+image[numbers2[0]] + " " + image[numbers2[1]] + " "+ image[numbers2[2]] + " "+ image[numbers2[3]] );
+    $("#patient3").html( "&nbsp"+image[numbers3[0]] + " " + image[numbers3[1]] + " "+ image[numbers3[2]] + " "+ image[numbers3[3]] + " "+ image[numbers3[4]] );
   }
     $("h2").html("20/100 <br /> 20/80 <br /> 20/70");
   }
    if (data.size == 605040 ){
      clear();
-     $("#patient1").css("display", "block");
-     $("#patient2").css("display", "block");
-     $("#patient3").css("display", "block");
+
      firstLine.className = ("tumble60");
      secondLine.className = ("tumble50");
      thirdLine.className = ("tumble40");
-     if (singleLetter == true){
-       $("#oneone").attr("src", "/images/" + image[numbers[1]]).show();
-       $("#twoone").attr("src", "/images/" + image[numbers[2]]).show();
-       $("#threeone").attr("src", "/images/" + image[numbers[3]]).show();
-       // $('#patient1').html("<img src='/images/" + image[numbers[1]] + "'/> " );
-       // $('#patient2').html("<img src='/images/" + image[numbers[2]] + "'/> " );
-       // $('#patient3').html("<img src='/images/" + image[numbers[3]] + "'/> " );
-     } else {
-       $("#oneone").attr("src", "/images/" + image[numbers[0]]).show();
-       $("#onetwo").attr("src", "/images/" + image[numbers[1]]).show();
-       $("#onethree").attr("src", "/images/" + image[numbers[2]]).show();
-       $("#onefour").attr("src", "/images/" + image[numbers[3]]).show();
-       $("#onefive").attr("src", "/images/" + image[numbers[4]]).show();
+     if(fontType == false && singleLetter == false){
+   $('#patient1').html("<img src='/images/" + image[numbers[0]] + "'/> <img src='/images/" + image[numbers[1]] + "' /> <img src='/images/" + image[numbers[2]] + "'/> <img src='/images/" + image[numbers[3]] + "'/> <img src='/images/" + image[numbers[4]] + "'/>" );
+   $('#patient2').html("<img src='/images/" + image[numbers2[0]] + "'/> <img src='/images/" + image[numbers2[1]] + "' /> <img src='/images/" + image[numbers2[2]] + "' /> <img src='/images/" + image[numbers2[3]] + "' /> <img src='/images/" + image[numbers2[4]] + "'/>" );
+   $('#patient3').html("<img src='/images/" + image[numbers3[0]] + "'/> <img src='/images/" + image[numbers3[1]] + "' /> <img src='/images/" + image[numbers3[2]] + "' /> <img src='/images/" + image[numbers3[3]] + "' /> <img src='/images/" + image[numbers3[4]] + "' />" );
+   } if (fontType == true && singleLetter == false) {
+   $("#patient1").html( "&nbsp"+image[numbers[0]] + " " + image[numbers[1]] + " "+ image[numbers[2]]+ " "+ image[numbers[3]]+ " "+ image[numbers[4]]);
+   $("#patient2").html( "&nbsp"+image[numbers2[0]] + " " + image[numbers2[1]] + " "+ image[numbers2[2]] + " "+ image[numbers2[3]] + " "+ image[numbers2[4]] );
+   $("#patient3").html( "&nbsp"+image[numbers3[0]] + " " + image[numbers3[1]] + " "+ image[numbers3[2]] + " "+ image[numbers3[3]] + " "+ image[numbers3[4]] );
+   } if(fontType == false && singleLetter == true){
+   $('#patient1').html("<img src='/images/" + image[numbers[1]] + "'/> ");
+   $('#patient2').html("<img src='/images/" + image[numbers[2]] + "'/> ");
+   $('#patient3').html("<img src='/images/" + image[numbers[3]] + "'/> ");
+   } if (fontType == true && singleLetter == true){
+   $("#patient1").html(image[numbers[1]]);
+   $("#patient2").html(image[numbers[2]]);
+   $("#patient3").html(image[numbers[3]]);
 
-       $("#twoone").attr("src", "/images/" + image[numbers2[0]]).show();
-       $("#twotwo").attr("src", "/images/" + image[numbers2[1]]).show();
-       $("#twothree").attr("src", "/images/" + image[numbers2[2]]).show();
-       $("#twofour").attr("src", "/images/" + image[numbers2[3]]).show();
-       $("#twofive").attr("src", "/images/" + image[numbers2[4]]).show();
-
-       $("#threeone").attr("src", "/images/" + image[numbers3[0]]).show();
-       $("#threetwo").attr("src", "/images/" + image[numbers3[1]]).show();
-       $("#threethree").attr("src", "/images/" + image[numbers3[2]]).show();
-       $("#threefour").attr("src", "/images/" + image[numbers3[3]]).show();
-       $("#threefive").attr("src", "/images/" + image[numbers3[4]]).show();
-    // $('#patient1').html("<img src='/images/" + image[numbers[0]] + "'/> <img src='/images/" + image[numbers[1]] + "' /> <img src='/images/" + image[numbers[2]] + "' /> <img src='/images/" + image[numbers[3]] + "' /> <img src='/images/" + image[numbers[4]] + "' />" );
-    // $('#patient2').html("<img src='/images/" + image[numbers2[0]] + "'/> <img src='/images/" + image[numbers2[1]] + "' /> <img src='/images/" + image[numbers2[2]] + "' /> <img src='/images/" + image[numbers2[3]] + "' /> <img src='/images/" + image[numbers2[4]] + "' />" );
-    // $('#patient3').html("<img src='/images/" + image[numbers3[0]] + "'/> <img src='/images/" + image[numbers3[1]] + "' /> <img src='/images/" + image[numbers3[2]] + "' /> <img src='/images/" + image[numbers3[3]] + "' /> <img src='/images/" + image[numbers3[4]] + "' />" );
-  }
+   }
     $("h2").html("20/60 <br /> 20/50 <br /> 20/40");
 
   }
    if (data.size == 302520 ){
      clear();
-     $("#patient1").css("display", "block");
-     $("#patient2").css("display", "block");
-     $("#patient3").css("display", "block");
+
      firstLine.className = ("tumble30");
      secondLine.className = ("tumble25");
      thirdLine.className = ("tumble20");
-     if (singleLetter == true){
-       $("#oneone").attr("src", "/images/" + image[numbers[1]]).show();
-       $("#twoone").attr("src", "/images/" + image[numbers[2]]).show();
-       $("#threeone").attr("src", "/images/" + image[numbers[3]]).show();
-       // $('#patient1').html("<img src='/images/" + image[numbers[1]] + "'/> " );
-       // $('#patient2').html("<img src='/images/" + image[numbers[2]] + "'/> " );
-       // $('#patient3').html("<img src='/images/" + image[numbers[3]] + "'/> " );
-     } else {
-       $("#oneone").attr("src", "/images/" + image[numbers[0]]).show();
-       $("#onetwo").attr("src", "/images/" + image[numbers[1]]).show();
-       $("#onethree").attr("src", "/images/" + image[numbers[2]]).show();
-       $("#onefour").attr("src", "/images/" + image[numbers[3]]).show();
-       $("#onefive").attr("src", "/images/" + image[numbers[4]]).show();
+     if(fontType == false && singleLetter == false){
+   $('#patient1').html("<img src='/images/" + image[numbers[0]] + "'/> <img src='/images/" + image[numbers[1]] + "' /> <img src='/images/" + image[numbers[2]] + "'/> <img src='/images/" + image[numbers[3]] + "'/> <img src='/images/" + image[numbers[4]] + "'/>" );
+   $('#patient2').html("<img src='/images/" + image[numbers2[0]] + "'/> <img src='/images/" + image[numbers2[1]] + "' /> <img src='/images/" + image[numbers2[2]] + "' /> <img src='/images/" + image[numbers2[3]] + "' /> <img src='/images/" + image[numbers2[4]] + "'/>" );
+   $('#patient3').html("<img src='/images/" + image[numbers3[0]] + "'/> <img src='/images/" + image[numbers3[1]] + "' /> <img src='/images/" + image[numbers3[2]] + "' /> <img src='/images/" + image[numbers3[3]] + "' /> <img src='/images/" + image[numbers3[4]] + "' />" );
+   } if (fontType == true && singleLetter == false) {
+   $("#patient1").html( "&nbsp"+image[numbers[0]] + " " + image[numbers[1]] + " "+ image[numbers[2]]+ " "+ image[numbers[3]]+ " "+ image[numbers[4]]);
+   $("#patient2").html( "&nbsp"+image[numbers2[0]] + " " + image[numbers2[1]] + " "+ image[numbers2[2]] + " "+ image[numbers2[3]] + " "+ image[numbers2[4]] );
+   $("#patient3").html( "&nbsp"+image[numbers3[0]] + " " + image[numbers3[1]] + " "+ image[numbers3[2]] + " "+ image[numbers3[3]] + " "+ image[numbers3[4]] );
+   } if(fontType == false && singleLetter == true){
+   $('#patient1').html("<img src='/images/" + image[numbers[1]] + "'/> ");
+   $('#patient2').html("<img src='/images/" + image[numbers[2]] + "'/> ");
+   $('#patient3').html("<img src='/images/" + image[numbers[3]] + "'/> ");
+   } if (fontType == true && singleLetter == true){
+   $("#patient1").html(image[numbers[1]]);
+   $("#patient2").html(image[numbers[2]]);
+   $("#patient3").html(image[numbers[3]]);
 
-       $("#twoone").attr("src", "/images/" + image[numbers2[0]]).show();
-       $("#twotwo").attr("src", "/images/" + image[numbers2[1]]).show();
-       $("#twothree").attr("src", "/images/" + image[numbers2[2]]).show();
-       $("#twofour").attr("src", "/images/" + image[numbers2[3]]).show();
-       $("#twofive").attr("src", "/images/" + image[numbers2[4]]).show();
-
-       $("#threeone").attr("src", "/images/" + image[numbers3[0]]).show();
-       $("#threetwo").attr("src", "/images/" + image[numbers3[1]]).show();
-       $("#threethree").attr("src", "/images/" + image[numbers3[2]]).show();
-       $("#threefour").attr("src", "/images/" + image[numbers3[3]]).show();
-       $("#threefive").attr("src", "/images/" + image[numbers3[4]]).show();
-    // $('#patient1').html("<img src='/images/" + image[numbers[0]] + "'/> <img src='/images/" + image[numbers[1]] + "' /> <img src='/images/" + image[numbers[2]] + "' /> <img src='/images/" + image[numbers[3]] + "' /> <img src='/images/" + image[numbers[4]] + "' />" );
-    // $('#patient2').html("<img src='/images/" + image[numbers2[0]] + "'/> <img src='/images/" + image[numbers2[1]] + "' /> <img src='/images/" + image[numbers2[2]] + "' /> <img src='/images/" + image[numbers2[3]] + "' /> <img src='/images/" + image[numbers2[4]] + "' />" );
-    // $('#patient3').html("<img src='/images/" + image[numbers3[0]] + "'/> <img src='/images/" + image[numbers3[1]] + "' /> <img src='/images/" + image[numbers3[2]] + "' /> <img src='/images/" + image[numbers3[3]] + "' /> <img src='/images/" + image[numbers3[4]] + "' />" );
-  }
+   }
     $("h2").html("20/30 <br /> 20/25 <br /> 20/20");
 
   }
    if (data.size == 6020 ){
      clear();
-     $("#patient1").css("display", "block");
-     $("#patient2").css("display", "block");
-     $("#patient3").css("display", "block");
-     $("#patient4").css("display", "block");
-     $("#patient5").css("display", "block");
-     $("#patient6").css("display", "block");
+
      firstLine.className = ("tumble60");
      secondLine.className = ("tumble50");
      thirdLine.className = ("tumble40");
      fourthLine.className = ("tumble30");
      fifthLine.className = ("tumble25");
      sixthLine.className = ("tumble20");
-     if (singleLetter == true){
-       $("#oneone").attr("src", "/images/" + image[numbers[1]]).show();
-       $("#twoone").attr("src", "/images/" + image[numbers[2]]).show();
-       $("#threeone").attr("src", "/images/" + image[numbers[3]]).show();
-       $("#fourone").attr("src", "/images/" + image[numbers[4]]).show();
-       $("#fiveone").attr("src", "/images/" + image[numbers[0]]).show();
-       $("#sixone").attr("src", "/images/" + image[numbers[2]]).show();
-       // $('#patient1').html("<img src='/images/" + image[numbers[1]] + "'/> " );
-       // $('#patient2').html("<img src='/images/" + image[numbers[2]] + "'/> " );
-       // $('#patient3').html("<img src='/images/" + image[numbers[3]] + "'/> " );
-       // $('#patient4').html("<img src='/images/" + image[numbers[4]] + "'/> " );
-       // $('#patient5').html("<img src='/images/" + image[numbers[0]] + "'/> " );
-       // $('#patient6').html("<img src='/images/" + image[numbers[2]] + "'/> " );
-     } else {
-       $("#oneone").attr("src", "/images/" + image[numbers[0]]).show();
-       $("#onetwo").attr("src", "/images/" + image[numbers[1]]).show();
-       $("#onethree").attr("src", "/images/" + image[numbers[2]]).show();
-       $("#onefour").attr("src", "/images/" + image[numbers[3]]).show();
-       $("#onefive").attr("src", "/images/" + image[numbers[4]]).show();
+     if(fontType == false && singleLetter == false){
+   $('#patient1').html("<img src='/images/" + image[numbers[0]] + "'/> <img src='/images/" + image[numbers[1]] + "' /> <img src='/images/" + image[numbers[2]] + "'/> <img src='/images/" + image[numbers[3]] + "'/> <img src='/images/" + image[numbers[4]] + "'/>" );
+   $('#patient2').html("<img src='/images/" + image[numbers2[0]] + "'/> <img src='/images/" + image[numbers2[1]] + "' /> <img src='/images/" + image[numbers2[2]] + "' /> <img src='/images/" + image[numbers2[3]] + "' /> <img src='/images/" + image[numbers2[4]] + "'/>" );
+   $('#patient3').html("<img src='/images/" + image[numbers3[0]] + "'/> <img src='/images/" + image[numbers3[1]] + "' /> <img src='/images/" + image[numbers3[2]] + "' /> <img src='/images/" + image[numbers3[3]] + "' /> <img src='/images/" + image[numbers3[4]] + "' />" );
+   $('#patient4').html("<img src='/images/" + image[numbers4[0]] + "'/> <img src='/images/" + image[numbers4[1]] + "' /> <img src='/images/" + image[numbers4[2]] + "'/> <img src='/images/" + image[numbers4[3]] + "'/> <img src='/images/" + image[numbers4[4]] + "'/>" );
+   $('#patient5').html("<img src='/images/" + image[numbers5[0]] + "'/> <img src='/images/" + image[numbers5[1]] + "' /> <img src='/images/" + image[numbers5[2]] + "' /> <img src='/images/" + image[numbers5[3]] + "' /> <img src='/images/" + image[numbers5[4]] + "'/>" );
+   $('#patient6').html("<img src='/images/" + image[numbers6[0]] + "'/> <img src='/images/" + image[numbers6[1]] + "' /> <img src='/images/" + image[numbers6[2]] + "' /> <img src='/images/" + image[numbers6[3]] + "' /> <img src='/images/" + image[numbers6[4]] + "' />" );
+   } if (fontType == true && singleLetter == false) {
+   $("#patient1").html(image[numbers[0]] + " " + image[numbers[1]] + " "+ image[numbers[2]]+ " "+ image[numbers[3]]+ " "+ image[numbers[4]]);
+   $("#patient2").html(image[numbers2[0]] + " " + image[numbers2[1]] + " "+ image[numbers2[2]] + " "+ image[numbers2[3]] + " "+ image[numbers2[4]] );
+   $("#patient3").html(image[numbers3[0]] + " " + image[numbers3[1]] + " "+ image[numbers3[2]] + " "+ image[numbers3[3]] + " "+ image[numbers3[4]] );
+   $("#patient4").html(image[numbers4[0]] + " " + image[numbers4[1]] + " "+ image[numbers4[2]] + " "+ image[numbers4[3]] + " "+ image[numbers4[4]] );
+   $("#patient5").html(image[numbers5[0]] + " " + image[numbers5[1]] + " "+ image[numbers5[2]] + " "+ image[numbers5[3]] + " "+ image[numbers5[4]] );
+   $("#patient6").html(image[numbers6[0]] + " " + image[numbers6[1]] + " "+ image[numbers6[2]] + " "+ image[numbers6[3]] + " "+ image[numbers6[4]] );
+   } if(fontType == false && singleLetter == true){
+   $('#patient1').html("<img src='/images/" + image[numbers[1]] + "'/> ");
+   $('#patient2').html("<img src='/images/" + image[numbers[2]] + "'/> ");
+   $('#patient3').html("<img src='/images/" + image[numbers[3]] + "'/> ");
+   $('#patient4').html("<img src='/images/" + image[numbers[4]] + "'/> ");
+   $('#patient5').html("<img src='/images/" + image[numbers[0]] + "'/> ");
+   $('#patient6').html("<img src='/images/" + image[numbers[2]] + "'/> ");
+   } if (fontType == true && singleLetter == true){
+   $("#patient1").html(image[numbers[1]]);
+   $("#patient2").html(image[numbers[2]]);
+   $("#patient3").html(image[numbers[3]]);
+   $("#patient4").html(image[numbers[4]]);
+   $("#patient5").html(image[numbers[0]]);
+   $("#patient6").html(image[numbers[2]]);
 
-       $("#twoone").attr("src", "/images/" + image[numbers2[0]]).show();
-       $("#twotwo").attr("src", "/images/" + image[numbers2[1]]).show();
-       $("#twothree").attr("src", "/images/" + image[numbers2[2]]).show();
-       $("#twofour").attr("src", "/images/" + image[numbers2[3]]).show();
-       $("#twofive").attr("src", "/images/" + image[numbers2[4]]).show();
-
-       $("#threeone").attr("src", "/images/" + image[numbers3[0]]).show();
-       $("#threetwo").attr("src", "/images/" + image[numbers3[1]]).show();
-       $("#threethree").attr("src", "/images/" + image[numbers3[2]]).show();
-       $("#threefour").attr("src", "/images/" + image[numbers3[3]]).show();
-       $("#threefive").attr("src", "/images/" + image[numbers3[4]]).show();
-
-       $("#fourone").attr("src", "/images/" + image[numbers4[0]]).show();
-       $("#fourtwo").attr("src", "/images/" + image[numbers4[1]]).show();
-       $("#fourthree").attr("src", "/images/" + image[numbers4[2]]).show();
-       $("#fourfour").attr("src", "/images/" + image[numbers4[3]]).show();
-       $("#fourfive").attr("src", "/images/" + image[numbers4[4]]).show();
-
-       $("#fiveone").attr("src", "/images/" + image[numbers5[0]]).show();
-       $("#fivetwo").attr("src", "/images/" + image[numbers5[1]]).show();
-       $("#fivethree").attr("src", "/images/" + image[numbers5[2]]).show();
-       $("#fivefour").attr("src", "/images/" + image[numbers5[3]]).show();
-       $("#fivefive").attr("src", "/images/" + image[numbers5[4]]).show();
-
-       $("#sixone").attr("src", "/images/" + image[numbers6[0]]).show();
-       $("#sixtwo").attr("src", "/images/" + image[numbers6[1]]).show();
-       $("#sixthree").attr("src", "/images/" + image[numbers6[2]]).show();
-       $("#sixfour").attr("src", "/images/" + image[numbers6[3]]).show();
-       $("#sixfive").attr("src", "/images/" + image[numbers6[4]]).show();
-    // $('#patient1').html("<img src='/images/" + image[numbers[0]] + "'/> <img src='/images/" + image[numbers[1]] + "' /> <img src='/images/" + image[numbers[2]] + "' /> <img src='/images/" + image[numbers[3]] + "' /> <img src='/images/" + image[numbers[4]] + "' />" );
-    // $('#patient2').html("<img src='/images/" + image[numbers2[0]] + "'/> <img src='/images/" + image[numbers2[1]] + "' /> <img src='/images/" + image[numbers2[2]] + "' /> <img src='/images/" + image[numbers2[3]] + "' /> <img src='/images/" + image[numbers2[4]] + "' />" );
-    // $('#patient3').html("<img src='/images/" + image[numbers3[0]] + "'/> <img src='/images/" + image[numbers3[1]] + "' /> <img src='/images/" + image[numbers3[2]] + "' /> <img src='/images/" + image[numbers3[3]] + "' /> <img src='/images/" + image[numbers3[4]] + "' />" );
-    // $('#patient4').html("<img src='/images/" + image[numbers4[0]] + "'/> <img src='/images/" + image[numbers4[1]] + "' /> <img src='/images/" + image[numbers4[2]] + "' /> <img src='/images/" + image[numbers4[3]] + "' /> <img src='/images/" + image[numbers4[4]] + "' />" );
-    // $('#patient5').html("<img src='/images/" + image[numbers5[0]] + "'/> <img src='/images/" + image[numbers5[1]] + "' /> <img src='/images/" + image[numbers5[2]] + "' /> <img src='/images/" + image[numbers5[3]] + "' /> <img src='/images/" + image[numbers5[4]] + "' />" );
-    // $('#patient6').html("<img src='/images/" + image[numbers6[0]] + "'/> <img src='/images/" + image[numbers6[1]] + "' /> <img src='/images/" + image[numbers6[2]] + "' /> <img src='/images/" + image[numbers6[3]] + "' /> <img src='/images/" + image[numbers6[4]] + "' />" );
-  }
+   }
     $("h2").html("20/60 <br /> 20/50 <br /> 20/40 <br />20/30 <br /> 20/25 <br /> 20/20");
 
   }
 
    if (data.size == "mode1"){
+     fontType = true;
     image = letters;
   }if (data.size == "mode2"){
+    fontType = false;
     image = numbersImg;
   }if (data.size == "mode3"){
+    fontType = false;
     image = ees;
   } if (data.size == "mode4"){
+    fontType = false;
     image = pictures;
   }
 

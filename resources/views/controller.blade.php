@@ -210,10 +210,25 @@
                border-radius: 5px;
               }
 
-              .text {
-      font-family: "Sloan", Sloan;
-      src: url('{{ asset('/font/Sloan.ttf') }}');
-    }
+              @font-face{
+        font-family: 'Sloan';
+        src: url('/font/Sloan.ttf') format('truetype');
+      }
+
+
+      .text{
+        font-family: 'Sloan';
+        font-size: 2em;
+        line-height: 30px;
+      }
+
+      .text2{
+        font-family: 'Sloan';
+        font-size: 2em;
+        line-height: 30px;
+        letter-spacing: 0.6em;
+      }
+
 
 
           </style>
@@ -225,7 +240,7 @@
 
     </head>
 
-    <body class="container">
+    <body class="container" onload="initialTrigger()">
 
 
            <div class="dropdown">
@@ -252,50 +267,17 @@
 
 
 
-<p class="text">
-  THIS IS A TEST OF THE FONT SYSTEM
-</p>
 
       <div class="lineHolder">
         <button class="singleButtons singleFilter" id="singleFilter" data-size="singleFilter">1</button>
         <button class="singleButtons" id="refresh" data-size="refresh">R</button>
-          <div class="lineContent">
-              <p id="line1">
-                <img src="" id="oneone" />
-                <img src="" id="onetwo" />
-                <img src="" id="onethree" />
-                <img src="" id="onefour" />
-                <img src="" id="onefive" /></p>
-              <p id="line2">
-                <img src="" id="twoone" />
-                <img src="" id="twotwo" />
-                <img src="" id="twothree" />
-                <img src="" id="twofour" />
-                <img src="" id="twofive" /></p>
-              <p id="line3">
-                <img src="" id="threeone" />
-                <img src="" id="threetwo" />
-                <img src="" id="threethree" />
-                <img src="" id="threefour" />
-                <img src="" id="threefive" /></p>
-              <p id="line4">
-                <img src="" id="fourone" />
-                <img src="" id="fourtwo" />
-                <img src="" id="fourthree" />
-                <img src="" id="fourfour" />
-                <img src="" id="fourfive" /></p>
-              <p id="line5">
-                <img src="" id="fiveone" />
-                <img src="" id="fivetwo" />
-                <img src="" id="fivethree" />
-                <img src="" id="fivefour" />
-                <img src="" id="fivefive" /></p>
-              <p id="line6">
-                <img src="" id="sixone" />
-                <img src="" id="sixtwo" />
-                <img src="" id="sixthree" />
-                <img src="" id="sixfour" />
-                <img src="" id="sixfive" /></p>
+        <div class="lineContent text">
+              <p id="line1"></p>
+              <p id="line2"></p>
+              <p id="line3"></p>
+              <p id="line4"></p>
+              <p id="line5"></p>
+              <p id="line6"></p>
           </div>
       </div>
 
