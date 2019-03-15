@@ -35,24 +35,33 @@
              body{
                   width: 60%;
                   margin: auto;
-                  background-color: #222629 ;
+                  background-image: radial-gradient(#333333, #666666, #333333);
+                  background-size: cover;
 
+              }
 
+              @media only screen and (max-width: 600px) {
+                body {
+                  width: 90%;
+                }
               }
 
               .modeHolder{
                   margin: auto;
-                  display: flex;
                   justify-content: center;
+                  display: flex;
+                  flex-wrap: wrap;
                   align-content: center;
+                  align-items: stretch;
                 }
 
 
               .modeButton{
                   height: 40px;
                   width: 100px;
-                   background-image: linear-gradient(to right, #8e0202 , #bf0000);
-                  color: white;
+                   background-image: linear-gradient(to top, #bfbfbf , #fff);
+                   font-weight: bold;
+                  color: #8E0202;
                   float: left;
                   margin: 15px 7px 0 7px;
                   border: none;
@@ -89,7 +98,9 @@
                   color: white;
                   float: left;
                   margin: 15px 7px 0 7px;
-                  border: none;
+                  border-bottom: 5px solid #8E0202;
+
+                  border-collapse: separate;
                   border-radius: 5px;
 
               }
@@ -121,7 +132,7 @@
 
 
               .dropbtn {
-                  background-color: #152f59;
+                   background-image: linear-gradient(to right, #022140 , #140289);
                   color: white;
                   padding: 6px;
                   font-size: 16px;
@@ -141,11 +152,11 @@
               .dropdown-content {
                   display: none;
                   position: fixed;
-                 top: 35px;
+                 /* top: 35px; */
                  left: 0;
                   background-color: #f9f9f9;
                   min-width: 160px;
-                  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                  /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
                   z-index: 1;
               }
 
@@ -228,6 +239,7 @@
         line-height: 30px;
         letter-spacing: 0.6em;
       }
+
 
 
 

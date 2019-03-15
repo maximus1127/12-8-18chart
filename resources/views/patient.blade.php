@@ -91,7 +91,7 @@
 
   .tumble100 img {
 
-
+    height: 500%;
   }
 
   .tumble80 img {
@@ -160,10 +160,10 @@
 
   .tumble100 {
     text-align: center;
-padding: 20px 0;
-margin: 0;
+    padding: 20px 0;
+    margin: 0;
     font-size: 500%;
-    letter-spacing: .2em;
+    letter-spacing: .3em;
 
   }
 
@@ -597,7 +597,7 @@ socket.on('private-default:App\\Events\\EventWasTriggered', function(data){
   } if(singleLetter == false && fontType == false){
    $("#patient1").html("<img src='/images/" + image[numbers[1]] + "'/> <img src='/images/" + image[numbers[2]] + "' /> <img src='/images/" + image[numbers[3]] + "' /> <img src='/images/" + image[numbers[4]] + "' /> <img src='/images/" + image[numbers[0]] + "' />" );
  } if (singleLetter == false && fontType == true){
-   $("#patient1").html( image[numbers[1]] +" "+  image[numbers[2]] + " " + image[numbers[3]] + " " +  image[numbers[4]] + " " + image[numbers[0]]);
+   $("#patient1").html( "&nbsp" +image[numbers[1]] +" "+  image[numbers[2]] + " " + image[numbers[3]] + " " +  image[numbers[4]] + " " + image[numbers[0]]);
  }
 
    $("h2").html("20/"+size);
@@ -612,7 +612,7 @@ socket.on('private-default:App\\Events\\EventWasTriggered', function(data){
   } if(singleLetter == false && fontType == false){
    $("#patient1").html("<img src='/images/" + image[numbers[1]] + "'/> <img src='/images/" + image[numbers[2]] + "' /> <img src='/images/" + image[numbers[3]] + "' /> <img src='/images/" + image[numbers[4]] + "' /> <img src='/images/" + image[numbers[0]] + "' />" );
  } if (singleLetter == false && fontType == true){
-   $("#patient1").html( image[numbers[1]] +" "+  image[numbers[2]] + " " + image[numbers[3]] + " " +  image[numbers[4]] + " " + image[numbers[0]]);
+   $("#patient1").html( "&nbsp" +image[numbers[1]] +" "+  image[numbers[2]] + " " + image[numbers[3]] + " " +  image[numbers[4]] + " " + image[numbers[0]]);
  }
   $("h2").html("20/"+size);
 
@@ -627,7 +627,7 @@ socket.on('private-default:App\\Events\\EventWasTriggered', function(data){
   } if(singleLetter == false && fontType == false){
    $("#patient1").html("<img src='/images/" + image[numbers[1]] + "'/> <img src='/images/" + image[numbers[2]] + "' /> <img src='/images/" + image[numbers[3]] + "' /> <img src='/images/" + image[numbers[4]] + "' /> <img src='/images/" + image[numbers[0]] + "' />" );
   } if (singleLetter == false && fontType == true){
-   $("#patient1").html( image[numbers[1]] +" "+  image[numbers[2]] + " " + image[numbers[3]] + " " +  image[numbers[4]] + " " + image[numbers[0]]);
+   $("#patient1").html( "&nbsp" +image[numbers[1]] +" "+  image[numbers[2]] + " " + image[numbers[3]] + " " +  image[numbers[4]] + " " + image[numbers[0]]);
   }
    $("h2").html("20/"+size);
 
@@ -642,7 +642,7 @@ socket.on('private-default:App\\Events\\EventWasTriggered', function(data){
   } if(singleLetter == false && fontType == false){
    $("#patient1").html("<img src='/images/" + image[numbers[1]] + "'/> <img src='/images/" + image[numbers[2]] + "' /> <img src='/images/" + image[numbers[3]] + "' /> <img src='/images/" + image[numbers[4]] + "' /> <img src='/images/" + image[numbers[0]] + "' />" );
   } if (singleLetter == false && fontType == true){
-   $("#patient1").html( image[numbers[1]] +" "+  image[numbers[2]] + " " + image[numbers[3]] + " " +  image[numbers[4]] + " " + image[numbers[0]]);
+   $("#patient1").html( "&nbsp" +image[numbers[1]] +" "+  image[numbers[2]] + " " + image[numbers[3]] + " " +  image[numbers[4]] + " " + image[numbers[0]]);
   }
   $("h2").html("20/"+size);
 
@@ -657,7 +657,7 @@ socket.on('private-default:App\\Events\\EventWasTriggered', function(data){
   } if(singleLetter == false && fontType == false){
    $("#patient1").html("<img src='/images/" + image[numbers[1]] + "'/> <img src='/images/" + image[numbers[2]] + "' /> <img src='/images/" + image[numbers[3]] + "' /> <img src='/images/" + image[numbers[4]] + "' /> <img src='/images/" + image[numbers[0]] + "' />" );
   } if (singleLetter == false && fontType == true){
-   $("#patient1").html( image[numbers[1]] +" "+  image[numbers[2]] + " " + image[numbers[3]] + " " +  image[numbers[4]] + " " + image[numbers[0]]);
+   $("#patient1").html( "&nbsp" +image[numbers[1]] +" "+  image[numbers[2]] + " " + image[numbers[3]] + " " +  image[numbers[4]] + " " + image[numbers[0]]);
   }
    $("h2").html("20/"+size);
 
@@ -672,7 +672,7 @@ socket.on('private-default:App\\Events\\EventWasTriggered', function(data){
   } if(singleLetter == false && fontType == false){
    $("#patient1").html("<img src='/images/" + image[numbers[1]] + "'/> <img src='/images/" + image[numbers[2]] + "' /> <img src='/images/" + image[numbers[3]] + "' /> <img src='/images/" + image[numbers[4]] + "' /> <img src='/images/" + image[numbers[0]] + "' />" );
   } if (singleLetter == false && fontType == true){
-   $("#patient1").html( image[numbers[1]] +" "+  image[numbers[2]] + " " + image[numbers[3]] + " " +  image[numbers[4]] + " " + image[numbers[0]]);
+   $("#patient1").html("&nbsp" + image[numbers[1]] +" "+  image[numbers[2]] + " " + image[numbers[3]] + " " +  image[numbers[4]] + " " + image[numbers[0]]);
   }
   $("h2").html("20/"+size);
 
@@ -687,7 +687,7 @@ socket.on('private-default:App\\Events\\EventWasTriggered', function(data){
   } if(singleLetter == false && fontType == false){
    $("#patient1").html("<img src='/images/" + image[numbers[1]] + "'/> <img src='/images/" + image[numbers[2]] + "' /> <img src='/images/" + image[numbers[3]] + "' /> <img src='/images/" + image[numbers[4]] + "' /> <img src='/images/" + image[numbers[0]] + "' />" );
   } if (singleLetter == false && fontType == true){
-   $("#patient1").html( image[numbers[1]] +" "+  image[numbers[2]] + " " + image[numbers[3]] + " " +  image[numbers[4]] + " " + image[numbers[0]]);
+   $("#patient1").html("&nbsp" + image[numbers[1]] +" "+  image[numbers[2]] + " " + image[numbers[3]] + " " +  image[numbers[4]] + " " + image[numbers[0]]);
   }
    $("h2").html("20/"+size);
 
@@ -702,7 +702,7 @@ socket.on('private-default:App\\Events\\EventWasTriggered', function(data){
   } if(singleLetter == false && fontType == false){
    $("#patient1").html("<img src='/images/" + image[numbers[1]] + "'/> <img src='/images/" + image[numbers[2]] + "' /> <img src='/images/" + image[numbers[3]] + "' /> <img src='/images/" + image[numbers[4]] + "' />" );
   } if (singleLetter == false && fontType == true){
-   $("#patient1").html( image[numbers[1]] +" "+  image[numbers[2]] + " " + image[numbers[3]] + " " +  image[numbers[4]]);
+   $("#patient1").html( "&nbsp" +image[numbers[1]] +" "+  image[numbers[2]] + " " + image[numbers[3]] + " " +  image[numbers[4]]);
   }
   $("h2").html("20/"+size);
 
@@ -717,7 +717,7 @@ socket.on('private-default:App\\Events\\EventWasTriggered', function(data){
   } if(singleLetter == false && fontType == false){
    $("#patient1").html("<img src='/images/" + image[numbers[1]] + "'/> <img src='/images/" + image[numbers[2]] + "' /> <img src='/images/" + image[numbers[3]] + "' />" );
   } if (singleLetter == false && fontType == true){
-   $("#patient1").html( image[numbers[1]] +" "+  image[numbers[2]] + " " + image[numbers[3]]);
+   $("#patient1").html("&nbsp" + image[numbers[1]] +" "+  image[numbers[2]] + " " + image[numbers[3]]);
   }
    $("h2").html("20/"+size);
 
@@ -732,7 +732,7 @@ socket.on('private-default:App\\Events\\EventWasTriggered', function(data){
   } if(singleLetter == false && fontType == false){
    $("#patient1").html("<img src='/images/" + image[numbers[1]] + "'/> <img src='/images/" + image[numbers[2]] + "'  />" );
  } if (singleLetter == false && fontType == true){
-   $("#patient1").html( image[numbers[1]] +" "+  image[numbers[2]]);
+   $("#patient1").html( "&nbsp" +image[numbers[1]] +" "+  image[numbers[2]]);
  }
 
   $("h2").html("20/"+size);
@@ -748,7 +748,7 @@ socket.on('private-default:App\\Events\\EventWasTriggered', function(data){
   } if(singleLetter == false && fontType == false){
    $("#patient1").html("<img src='/images/" + image[numbers[1]] + "' />" );
  } if (singleLetter == false && fontType == true){
-   $("#patient1").html( image[numbers[1]] );
+   $("#patient1").html("&nbsp" + image[numbers[1]] );
  }
    $("h2").html("20/"+size);
 
@@ -763,7 +763,7 @@ socket.on('private-default:App\\Events\\EventWasTriggered', function(data){
   } if(singleLetter == false && fontType == false){
    $("#patient1").html("<img src='/images/" + image[numbers[1]] + "' />" );
  } if (singleLetter == false && fontType == true){
-   $("#patient1").html( image[numbers[1]] );
+   $("#patient1").html( "&nbsp" +image[numbers[1]] );
  }
   $("h2").html("20/"+size);
   }
@@ -881,12 +881,12 @@ socket.on('private-default:App\\Events\\EventWasTriggered', function(data){
    $('#patient5').html("<img src='/images/" + image[numbers5[0]] + "'/> <img src='/images/" + image[numbers5[1]] + "' /> <img src='/images/" + image[numbers5[2]] + "' /> <img src='/images/" + image[numbers5[3]] + "' /> <img src='/images/" + image[numbers5[4]] + "'/>" );
    $('#patient6').html("<img src='/images/" + image[numbers6[0]] + "'/> <img src='/images/" + image[numbers6[1]] + "' /> <img src='/images/" + image[numbers6[2]] + "' /> <img src='/images/" + image[numbers6[3]] + "' /> <img src='/images/" + image[numbers6[4]] + "' />" );
    } if (fontType == true && singleLetter == false) {
-   $("#patient1").html(image[numbers[0]] + " " + image[numbers[1]] + " "+ image[numbers[2]]+ " "+ image[numbers[3]]+ " "+ image[numbers[4]]);
-   $("#patient2").html(image[numbers2[0]] + " " + image[numbers2[1]] + " "+ image[numbers2[2]] + " "+ image[numbers2[3]] + " "+ image[numbers2[4]] );
-   $("#patient3").html(image[numbers3[0]] + " " + image[numbers3[1]] + " "+ image[numbers3[2]] + " "+ image[numbers3[3]] + " "+ image[numbers3[4]] );
-   $("#patient4").html(image[numbers4[0]] + " " + image[numbers4[1]] + " "+ image[numbers4[2]] + " "+ image[numbers4[3]] + " "+ image[numbers4[4]] );
-   $("#patient5").html(image[numbers5[0]] + " " + image[numbers5[1]] + " "+ image[numbers5[2]] + " "+ image[numbers5[3]] + " "+ image[numbers5[4]] );
-   $("#patient6").html(image[numbers6[0]] + " " + image[numbers6[1]] + " "+ image[numbers6[2]] + " "+ image[numbers6[3]] + " "+ image[numbers6[4]] );
+   $("#patient1").html("&nbsp"+image[numbers[0]] + " " + image[numbers[1]] + " "+ image[numbers[2]]+ " "+ image[numbers[3]]+ " "+ image[numbers[4]]);
+   $("#patient2").html("&nbsp"+image[numbers2[0]] + " " + image[numbers2[1]] + " "+ image[numbers2[2]] + " "+ image[numbers2[3]] + " "+ image[numbers2[4]] );
+   $("#patient3").html("&nbsp"+image[numbers3[0]] + " " + image[numbers3[1]] + " "+ image[numbers3[2]] + " "+ image[numbers3[3]] + " "+ image[numbers3[4]] );
+   $("#patient4").html("&nbsp"+image[numbers4[0]] + " " + image[numbers4[1]] + " "+ image[numbers4[2]] + " "+ image[numbers4[3]] + " "+ image[numbers4[4]] );
+   $("#patient5").html("&nbsp"+image[numbers5[0]] + " " + image[numbers5[1]] + " "+ image[numbers5[2]] + " "+ image[numbers5[3]] + " "+ image[numbers5[4]] );
+   $("#patient6").html("&nbsp"+image[numbers6[0]] + " " + image[numbers6[1]] + " "+ image[numbers6[2]] + " "+ image[numbers6[3]] + " "+ image[numbers6[4]] );
    } if(fontType == false && singleLetter == true){
    $('#patient1').html("<img src='/images/" + image[numbers[1]] + "'/> ");
    $('#patient2').html("<img src='/images/" + image[numbers[2]] + "'/> ");
