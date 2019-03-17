@@ -224,17 +224,17 @@ socket.on('private-default:App\\Events\\EventWasTriggered', function(data){
   }else if (data.size == "mode2"){
     $("*.modeButtonActive").removeClass("modeButtonActive");
     $("#number").addClass("modeButtonActive");
-    fontType = false;
+    fontType = true;
     image = numbers
   }else if (data.size == "mode3"){
     $("*.modeButtonActive").removeClass("modeButtonActive");
     $("#tumblingE").addClass("modeButtonActive");
-    fontType = false;
+    fontType = true;
     image = ees;
   }else if (data.size == "mode4"){
     $("*.modeButtonActive").removeClass("modeButtonActive");
     $("#picture").addClass("modeButtonActive");
-    fontType = false;
+    fontType = true;
     image = pictures;
   }else if (data.size == "duochrome"){
     $("#duochrome").toggleClass("duochrome");

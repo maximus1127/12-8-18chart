@@ -555,9 +555,9 @@ function clear(){
 
 var currentZoom = 20;
 var letters = ["C", "D", "H", "K", "N", "O", "R", "S", "V", "Z"];
-var numbersImg = ["1.png", "2.png", "3.png", "4.png", "5.png", "6.png", "7.png", "8.png", "9.png" , "5.png"];
-var ees = ["Down.png","Up.png","Left.png","Right.png", "Down.png","Up.png","Left.png","Right.png","Left.png","Right.png"];
-var pictures = ["Phone.png", "Horse.png", "Car.png", "Hand.png", "Bird.png", "Cake.png", "Phone.png", "Horse.png", "Car.png", "Hand.png", "Bird.png", "Cake.png"];
+var numbersImg = ["1", "2", "3", "4", "5", "6", "7", "8", "9" , "5"];
+var ees = ["d","j","i","e", "d","j","i","e","i","j"];
+var pictures = ["k", "h", "f", "g", "b", "c", "k", "h", "f", "g", "b", "c"];
 var image = letters;
 var singleLetter = false;
 var fontType = true;
@@ -911,13 +911,13 @@ socket.on('private-default:App\\Events\\EventWasTriggered', function(data){
      fontType = true;
     image = letters;
   }if (data.size == "mode2"){
-    fontType = false;
+    fontType = true;
     image = numbersImg;
   }if (data.size == "mode3"){
-    fontType = false;
+    fontType = true;
     image = ees;
   } if (data.size == "mode4"){
-    fontType = false;
+    fontType = true;
     image = pictures;
   }
 
