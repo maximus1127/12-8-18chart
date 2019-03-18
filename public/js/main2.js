@@ -115,6 +115,7 @@ socket.on('private-default:App\\Events\\EventWasTriggered', function(data){
   $("#line2").html(image[size[2]]);
   }
     $("*.lineButtonActive").removeClass("lineButtonActive");
+    
      $('*[data-size="' + data.size + '"]').toggleClass("lineButtonActive");
   }else if (data.size == 1008070 ){
     clear();
