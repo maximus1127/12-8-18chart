@@ -22,12 +22,14 @@ body{
 	background-size: 35%, 35%, 15%, cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+  margin-top: -30px;
+
 }
 /* @media only screen and (max-width: 600px) { */
 @media only screen and (max-width: 800px) {
 	body {
 		/* width: 90%; */
-		background-size: 50%, 50%, 15%, cover;
+		background-size: 80%, 80%, 35%, cover;
 	}
 }
 
@@ -139,7 +141,9 @@ button:active{
 @media only screen and (max-width: 800px) {
 	.modeHolder {
 		margin: 0;
+
 	}
+
 }
 
 .modeButton{
@@ -149,7 +153,7 @@ button:active{
 	font-weight: bold;
 	color: #8E0202;
 	/* float: left; */
-	margin: 15px 7px 15px 7px; /*15px 7px 0 7px;*/
+	margin: 5px 7px 15px 7px; /*15px 7px 0 7px;*/
 	border: none;
 	border-radius: 5px;
 	/* font-family: 'GOTHIC'; */
@@ -161,7 +165,7 @@ button:active{
 	background-image: linear-gradient(to right, #022140 , #140289);
 	color: white;
 	/* float: left; */
-	margin: 15px 7px 0 7px;
+	margin: 5px 7px 15px 7px;
 	border: none;
 	border-radius: 5px;
 }
@@ -172,7 +176,7 @@ button:active{
 	background-image: linear-gradient(to right, #022140 , #140289);
 	color: white;
 	/* float: left; */
-	margin: 15px 7px 0 7px;
+	margin: 5px 7px 15px 7px;
 	border: none;
 	border-radius: 5px;
 }
@@ -182,7 +186,7 @@ button:active{
 	/*background-image: linear-gradient(to right, #022140 , #140289);*/
 	color: white;
 	/* float: left; */
-	margin: 15px 7px 0 7px;
+	margin: 5px 7px 15px 7px;
 	border-bottom: 5px solid #810815; /* #8E0202 */
 	border-collapse: separate;
 	border-radius: 5px;
@@ -212,6 +216,12 @@ button:active{
 	.lineHolder {
 		background-size: 15%, cover;
 	}
+}
+@media only screen and (max-width: 650px) {
+	 .modeButton{
+	    width: 80px;
+	}
+  body{margin-top: opx;}
 }
 
 .lineContent{
@@ -349,14 +359,15 @@ button:active{
 		</div>
 	</div>
 
-	<div class="row justify-content-center gutter margin-top">
+	<div class="row justify-content-center gutter margin-top" >
 		<div class="logobackground">
 			<div class="modeHolder">
-				<div class="row justify-content-between">
+				<div class="row justify-content-center">
 				<button class="modeButton singleButtons modeButtonActive" id="singleLetter" data-size = "mode1" >Letters</button>
 				<button class="modeButton singleButtons" id="number" data-size = "mode2">Numbers</button>
 				<button class="modeButton singleButtons" id="tumblingE" data-size = "mode3">Tumbling E</button>
-
+      </div>
+          <div class="row justify-content-center col-sm-3 col-md-3 col-lg-3">
 				<button class="modeButton singleButtons" id="picture" data-size = "mode4">Pictures</button>
 				<button class="modeButton singleButtons" id="duochrome" data-size = "duochrome">DuoChrome</button>
 				<button class="modeButton singleButtons" id="mute" data-size = "mute">Mute</button>
@@ -378,19 +389,25 @@ button:active{
 
 			<div class="modeHolder">
 
-				<div class="row justify-content-center">
+				<div class="row justify-content-center col-6 col-sm-6 col-md-6 col-lg-6">
 				<button class="modeButton singleButtons" id="fourHundred" data-size="400">20/400</button>
 				<button class="modeButton singleButtons" id="threeHundred" data-size="300">20/300</button>
 				<button class="modeButton singleButtons" id="twoHundred" data-size="200">20/200</button>
-				<button class="modeButton singleButtons" id="oneHundred" data-size="100">20/100</button>
-				<button class="modeButton singleButtons" id="eighty" data-size="80">20/80</button>
-				<button class="modeButton singleButtons" id="seventy" data-size="70">20/70</button>
-				</div>
+        	{{-- </div>
+        <div class="row justify-content-center col-sm-3 col-md-3 col-lg-6"> --}}
+          <button class="modeButton singleButtons" id="oneHundred" data-size="100">20/100</button>
+          <button class="modeButton singleButtons" id="eighty" data-size="80">20/80</button>
+          <button class="modeButton singleButtons" id="seventy" data-size="70">20/70</button>
+        </div>
 
-				<div class="row justify-content-center">
+
+
+				<div class="row justify-content-center col-6 col-sm-6 col-md-6 col-lg-6">
 				<button class="modeButton singleButtons" id="sixty" data-size="60">20/60</button>
 				<button class="modeButton singleButtons" id="fifty" data-size="50">20/50</button>
 				<button class="modeButton singleButtons" id="forty" data-size="40">20/40</button>
+      {{-- </div>
+            <div class="row justify-content-center col-sm-3 col-md-3 col-lg-6"> --}}
 				<button class="modeButton singleButtons" id="thirty" data-size="30">20/30</button>
 				<button class="modeButton singleButtons" id="twentyFive" data-size="25">20/25</button>
 				<button class="modeButton singleButtons" id="twenty" data-size="20">20/20</button>
@@ -643,6 +660,7 @@ button:active{
       </div>
 
 	<script src="/js/jquery-3.3.1.min.js"></script>
+
 	<script src="/js/socket.io.js"></script>
 	<!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
 	<script src="/js/popper.min.js"></script>
