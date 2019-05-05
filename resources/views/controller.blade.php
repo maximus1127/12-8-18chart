@@ -12,6 +12,8 @@
 	width: 100%;
 	margin: 0;
   font-size: 14pt;
+    min-height: 100%;
+    
 }
 body{
 	/*width: 60%;*/
@@ -23,6 +25,7 @@ body{
 	background-repeat: no-repeat;
 	background-attachment: fixed;
   margin-top: -30px;
+
 
 }
 /* @media only screen and (max-width: 600px) { */
@@ -78,7 +81,7 @@ body{
 }
 
 .margin-top {
-	margin-top:5%;
+	margin-top:6%;
 }
 /*
 @media only screen and (max-width: 800px) {
@@ -222,7 +225,20 @@ button:active{
 	    width: 80px;
 	}
   body{margin-top: opx;}
+  .gutter{
+    margin-top: 12%;
+  }
 }
+@media only screen and (max-width: 450px) {
+	 .modeButton{
+	    width: 100px;
+	}
+  body{margin-top: opx;}
+  .gutter{
+    margin-top: 15%;
+  }
+}
+
 
 .lineContent{
 	line-height: 40px;
@@ -313,7 +329,9 @@ button:active{
 }
 
 .dropdown {
-	position: relative;
+	position: absolute;
+  top: 0;
+  left: 0;
 	display: inline-block;
 }
 

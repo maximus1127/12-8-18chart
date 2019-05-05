@@ -1,7 +1,7 @@
 <html>
 
 <head>
-
+<script src='/js/persist-min.js'></script>
   <style>
   html {
     height: 100%;
@@ -16,6 +16,7 @@
     margin: auto;
     height: 100%;
     width: 100%;
+
 
 
   }
@@ -267,6 +268,7 @@
       background:rgba(252,252,252,1);
       z-index: 10;
       line-height: 20px;
+        overflow:scroll;
     }
 
     @font-face{
@@ -544,7 +546,11 @@ Here we have the sizes of the 20/20 lines that you need to configure for each ex
 <script src="/js/jquery-3.3.1.min.js"></script>
 <script src="/js/socket.io.js"></script>
 <script src="/js/popper.min.js"></script>
+
 <script>
+
+
+
 function clear(){
   $("#patient1").html("").removeClass();
   $("#patient2").html("").removeClass();
@@ -962,53 +968,95 @@ socket.on('private-default:App\\Events\\EventWasTriggered', function(data){
     }
   }
 
+
+
+
   function grow(){
       currentZoom += 1;
       $("#content").css('font-size', currentZoom + 'px');
-      $("#content").css('height', currentZoom + 'px');
-      localStorage.setItem("storeSize", currentZoom);
-      console.log("grow triggered");
+      $.ajax({
+        url: "/insert",
+        data:{
+          size: currentZoom
+        }
+
+      });
+
+      // $("#content").css('height', currentZoom + 'px');
+      // document.cookie = "storeSize="+currentZoom+"; expires=Thu, 18 Dec 2040 12:00:00 UTC;"
+      // localStorage.setItem("storeSize", currentZoom);
+      // console.log("grow triggered");
   }
 
 
   function shrink(){
      currentZoom -= 1;
      $("#content").css('font-size', currentZoom + 'px');
-     $("#content").css('height', currentZoom + 'px');
-     localStorage.setItem("storeSize", currentZoom);
-     console.log("shrink triggered");
+     $.ajax({
+       url: "/insert",
+       data:{
+         size: currentZoom
+       }
+
+     });
   }
 
   function reset() {
-    localStorage.removeItem("storeSize");
-    localStorage.removeItem("mirror");
+document.cookie = "storeSize=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
+document.cookie = "mirror=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
 
     window.location.href = window.location.href;
   }
 
    function mirror(){
-       $("testDisplay").addClass("mirror");
-       localStorage.setItem("mirror", 1);
-   }
+     var mirror;
+     $.ajax({
+       url: "/mirrorGet",
+       success:function(result){
+         mirror = result.mirror;
+         if(mirror == 1){
+           $("#testDisplay").removeClass("mirror");
+           $.ajax({
+             url: "/mirror",
+             data:{
+               mirror: 0
+             }
+           });
+         } else if (mirror == 0) {
+           $("#testDisplay").addClass("mirror");
+           $.ajax({
+             url: "/mirror",
+             data:{
+               mirror: 1
+             }
+           });
+         }
+       }
+     });
 
-   if (localStorage.mirror){
-       $("#testDisplay").addClass("mirror");
    }
-
 
 });
 
 
 
   $(document).ready(function(){
+
+
+
     var numbers;
 
-    if (!localStorage.storeSize) {
+    if ({{$calibration->size}} == null) {
       currentZoom = 40;
     } else {
 
-    $("#content").css('font-size', localStorage.storeSize);
-    $("#content").css('height', localStorage.storeSize);
+    $("#content").css('font-size', {{$calibration->size}} + "px");
+
+    }
+
+    var invert2 = {{$calibration->mirror}};
+    if (invert2 == 1){
+        $("#testDisplay").addClass("mirror");
     }
 
 

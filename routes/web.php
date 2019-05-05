@@ -11,6 +11,7 @@
 |
 */
 use App\Events\EventWasTriggered;
+use App\Calibration;
 
 Route::get('/', function () {
     return view('controller');
@@ -39,5 +40,16 @@ Route::get('/a', function(){
 
 
 Route::get('/b', function(){
-  return view('patient');
+  $calibration = DB::table('calibrations')->find(1);
+
+  return view('patient')->with('calibration', $calibration);
 });
+
+Route::get('/test', function(){
+  return view('test');
+});
+
+
+Route::get('/insert', 'CalibrationController@insert');
+Route::get('/mirror', 'CalibrationController@mirror');
+Route::get('/mirrorGet', 'CalibrationController@mirrorGet');

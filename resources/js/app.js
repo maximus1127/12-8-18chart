@@ -6,6 +6,7 @@
  */
 
 require('./bootstrap');
+window.fs = require('graceful-fs');
 
 window.Vue = require('vue');
 
