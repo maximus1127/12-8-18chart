@@ -33,7 +33,7 @@ socket.on('private-default:App\\Events\\EventWasTriggered', function(data){
   if (data.size == "refresh"){
     location.reload();
   }
-  if(data.size == 20 || data.size == 25 || data.size == 30 || data.size == 40 || data.size == 50 || data.size == 60 || data.size == 70){
+  if(data.size == 10 || data.size == 15 || data.size == 20 || data.size == 25 || data.size == 30 || data.size == 40 || data.size == 50 || data.size == 60 || data.size == 70){
       clear();
       if(fontType == false && singleLetter == false){
     $('#line1').html("<img src='/images/" + image[size[1]] + "'/> <img src='/images/" + image[size[2]] + "' /> <img src='/images/" + image[size[3]] + "' /> <img src='/images/" + image[size[4]] + "' /> <img src='/images/" + image[size[0]] + "' />" );

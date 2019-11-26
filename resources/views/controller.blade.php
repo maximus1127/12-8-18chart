@@ -13,7 +13,7 @@
 	margin: 0;
   font-size: 14pt;
     min-height: 100%;
-    
+
 }
 body{
 	/*width: 60%;*/
@@ -292,7 +292,7 @@ button:active{
 
 .text{
 	font-family: 'Sloan';
-	font-size: 2em;
+	font-size: .8em;
 	line-height: 30px;
 }
 
@@ -416,19 +416,22 @@ button:active{
           <button class="modeButton singleButtons" id="oneHundred" data-size="100">20/100</button>
           <button class="modeButton singleButtons" id="eighty" data-size="80">20/80</button>
           <button class="modeButton singleButtons" id="seventy" data-size="70">20/70</button>
+          <button class="modeButton singleButtons" id="sixty" data-size="60">20/60</button>
+
         </div>
 
 
 
 				<div class="row justify-content-center col-6 col-sm-6 col-md-6 col-lg-6">
-				<button class="modeButton singleButtons" id="sixty" data-size="60">20/60</button>
-				<button class="modeButton singleButtons" id="fifty" data-size="50">20/50</button>
+  <button class="modeButton singleButtons" id="fifty" data-size="50">20/50</button>
 				<button class="modeButton singleButtons" id="forty" data-size="40">20/40</button>
       {{-- </div>
             <div class="row justify-content-center col-sm-3 col-md-3 col-lg-6"> --}}
 				<button class="modeButton singleButtons" id="thirty" data-size="30">20/30</button>
 				<button class="modeButton singleButtons" id="twentyFive" data-size="25">20/25</button>
 				<button class="modeButton singleButtons" id="twenty" data-size="20">20/20</button>
+        <button class="modeButton singleButtons" id="fifteen" data-size="15">20/15</button>
+        <button class="modeButton singleButtons" id="ten" data-size="10">20/10</button>
 				</div>
 
 				<div class="row justify-content-center">
@@ -515,6 +518,12 @@ button:active{
             </li>
             <li>
               S = 20/20
+            </li>
+            <li>
+              Z = 20/15
+            </li>
+            <li>
+              X = 20/10
             </li>
             <li>
               D = 20/400 and 20/200 group

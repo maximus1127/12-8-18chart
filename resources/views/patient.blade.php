@@ -138,6 +138,18 @@
     padding: .1em .1em;
   }
 
+  .tumble15 img {
+
+    height: 75%;
+    padding: .1em .1em;
+  }
+
+  .tumble10 img {
+
+    height: 50%;
+    padding: .1em .1em;
+  }
+
 /* ------------------------------------------------------------------------------------------------ */
 
   .tumble400 {
@@ -230,6 +242,20 @@
     padding: 20px 20px;
     margin: 0;
     font-size: 100%;
+    letter-spacing: .1em;
+
+  }
+  .tumble15 {
+    padding: 20px 20px;
+    margin: 0;
+    font-size: 75%;
+    letter-spacing: .1em;
+
+  }
+  .tumble10 {
+    padding: 20px 20px;
+    margin: 0;
+    font-size: 50%;
     letter-spacing: .1em;
 
   }
@@ -377,6 +403,12 @@ font-family: 'Sloan';
       </li>
       <li>
         S = 20/20
+      </li>
+      <li>
+        Z = 20/15
+      </li>
+      <li>
+        X = 20/10
       </li>
       <li>
         D = 20/400 and 20/200 group
@@ -594,6 +626,44 @@ socket.on('private-default:App\\Events\\EventWasTriggered', function(data){
    if (size == "refresh"){
      location.reload();
    }
+
+
+   if(size == 10){
+     clear();
+     firstLine.className = ("tumble10");
+     if (singleLetter == true && fontType == false){
+     $('#patient1').html("<img src='/images/" + image[numbers[1]] + "'/> " );
+   } if (singleLetter == true && fontType == true){
+     $("#patient1").html(image[numbers[1]]);
+   } if(singleLetter == false && fontType == false){
+    $("#patient1").html("<img src='/images/" + image[numbers[1]] + "'/> <img src='/images/" + image[numbers[2]] + "' /> <img src='/images/" + image[numbers[3]] + "' /> <img src='/images/" + image[numbers[4]] + "' /> <img src='/images/" + image[numbers[0]] + "' />" );
+  } if (singleLetter == false && fontType == true){
+    $("#patient1").html( "&nbsp" +image[numbers[1]] +" "+  image[numbers[2]] + " " + image[numbers[3]] + " " +  image[numbers[4]] + " " + image[numbers[0]]);
+  }
+
+    $("h2").html("20/"+size);
+   }
+
+
+
+
+   if(size == 15){
+     clear();
+     firstLine.className = ("tumble15");
+     if (singleLetter == true && fontType == false){
+     $('#patient1').html("<img src='/images/" + image[numbers[1]] + "'/> " );
+   } if (singleLetter == true && fontType == true){
+     $("#patient1").html(image[numbers[1]]);
+   } if(singleLetter == false && fontType == false){
+    $("#patient1").html("<img src='/images/" + image[numbers[1]] + "'/> <img src='/images/" + image[numbers[2]] + "' /> <img src='/images/" + image[numbers[3]] + "' /> <img src='/images/" + image[numbers[4]] + "' /> <img src='/images/" + image[numbers[0]] + "' />" );
+  } if (singleLetter == false && fontType == true){
+    $("#patient1").html( "&nbsp" +image[numbers[1]] +" "+  image[numbers[2]] + " " + image[numbers[3]] + " " +  image[numbers[4]] + " " + image[numbers[0]]);
+  }
+
+    $("h2").html("20/"+size);
+   }
+
+
 
   if(size == 20){
     clear();
