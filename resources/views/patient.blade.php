@@ -1176,6 +1176,12 @@ document.cookie = "mirror=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
       if (event.which == 83 ){
       numbers = 20;
       };
+      if (event.which == 90 ){
+      numbers = 15;
+      };
+      if (event.which == 88 ){
+      numbers = 10;
+      };
       if (event.which == 68 ){
       numbers = 400200;
       };

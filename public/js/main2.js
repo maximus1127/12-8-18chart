@@ -322,6 +322,12 @@ if (event.which == 65 ){
 if (event.which == 83 ){
  $( "#twenty" ).trigger( "click" );
 };
+if (event.which == 90 ){
+ $( "#fifteen" ).trigger( "click" );
+};
+if (event.which == 88 ){
+ $( "#ten" ).trigger( "click" );
+};
 if (event.which == 68 ){
  $( "#groupOne" ).trigger( "click" );
 };
