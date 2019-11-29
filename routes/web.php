@@ -19,12 +19,12 @@ Route::get('/', function () {
 
 Route::get('/a', function(){
   $size = request('size');
-  $numbers = implode('', array_rand(range(0, 9), 5));
-  $numbers2 = implode('', array_rand(range(0, 9), 5));
-  $numbers3 = implode('', array_rand(range(0, 9), 5));
-  $numbers4 = implode('', array_rand(range(0, 9), 5));
-  $numbers5 = implode('', array_rand(range(0, 9), 5));
-  $numbers6 = implode('', array_rand(range(0, 9), 5));
+  $numbers = str_shuffle(implode('', array_rand(range(0, 9), 5)));
+  $numbers2 = str_shuffle(implode('', array_rand(range(0, 9), 5)));
+  $numbers3 = str_shuffle(implode('', array_rand(range(0, 9), 5)));
+  $numbers4 = str_shuffle(implode('', array_rand(range(0, 9), 5)));
+  $numbers5 = str_shuffle(implode('', array_rand(range(0, 9), 5)));
+  $numbers6 = str_shuffle(implode('', array_rand(range(0, 9), 5)));
 
 
   event(new EventWasTriggered($size, $numbers, $numbers2, $numbers3, $numbers4, $numbers5, $numbers6));
@@ -45,9 +45,6 @@ Route::get('/b', function(){
   return view('patient')->with('calibration', $calibration);
 });
 
-Route::get('/test', function(){
-  return view('test');
-});
 
 
 Route::get('/insert', 'CalibrationController@insert');

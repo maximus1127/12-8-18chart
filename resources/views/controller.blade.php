@@ -41,6 +41,7 @@ body{
 	display: flex;
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
+
 }
 
 .justify-content-start {
@@ -268,6 +269,8 @@ button:active{
 	color: white;
 	border: none;
 	border-radius: 5px;
+  width: 30px;
+  height: 30px;
 }
 
 .singleFilterActive{
@@ -278,6 +281,55 @@ button:active{
 	color: white;
 	border: none;
 	border-radius: 5px;
+  width: 30px;
+  height: 30px;
+}
+.retinoscopy{
+	top: 60px;
+	left: 10px;
+	position: absolute;
+	background-image: linear-gradient(to right, #8e0202 , #bf0000);
+	color: white;
+	border: none;
+	border-radius: 5px;
+  width: 30px;
+  height: 30px;
+}
+
+.retinoscopyActive{
+	top: 60px;
+	left: 10px;
+	position: absolute;
+	background-image: linear-gradient(to right, #022140 , #140289);
+	color: white;
+	border: none;
+	border-radius: 5px;
+  width: 30px;
+  height: 30px;
+}
+
+.colorPlates{
+	top: 110px;
+	left: 10px;
+	position: absolute;
+	background-image: linear-gradient(to right, #8e0202 , #bf0000);
+	color: white;
+	border: none;
+	border-radius: 5px;
+  width: 30px;
+  height: 30px;
+}
+
+.colorPlatesActive{
+	top: 110px;
+	left: 10px;
+	position: absolute;
+	background-image: linear-gradient(to right, #022140 , #140289);
+	color: white;
+	border: none;
+	border-radius: 5px;
+  width: 30px;
+  height: 30px;
 }
 
 #refresh{
@@ -363,6 +415,21 @@ button:active{
 .dropdown:hover .dropbtn {
 	background-color: #3e8e41;
 }
+
+.newRow p, small{
+  display: inline;
+}
+
+small{
+  font-size: .9em;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#colorHolder{
+  display: none;
+}
+
 </style>
 </head>
 
@@ -386,7 +453,7 @@ button:active{
 				<button class="modeButton singleButtons" id="tumblingE" data-size = "mode3">Tumbling E</button>
       </div>
           <div class="row justify-content-center col-sm-3 col-md-3 col-lg-3">
-				<button class="modeButton singleButtons" id="picture" data-size = "mode4">Pictures</button>
+				<button class="modeButton singleButtons" id="picture" data-size = "mode4">LEA</button>
 				<button class="modeButton singleButtons" id="duochrome" data-size = "duochrome">DuoChrome</button>
 				<button class="modeButton singleButtons" id="mute" data-size = "mute">Mute</button>
 				</div>
@@ -394,20 +461,35 @@ button:active{
 
 			<div class="lineHolder">
 				<button class="singleButtons singleFilter" id="singleFilter" data-size="singleFilter">1</button>
+        <button class="singleButtons retinoscopy" id="retinoscopy" data-size="retinoscopy">RS</button>
+        <button class="singleButtons colorPlates" id="colorPlates" data-size="colorPlates">CP</button>
 				<button class="singleButtons" id="refresh" data-size="refresh">R</button>
 				<div class="lineContent text">
-					  <p id="line1"></p>
-					  <p id="line2"></p>
-					  <p id="line3"></p>
-					  <p id="line4"></p>
-					  <p id="line5"></p>
-					  <p id="line6"></p>
+          <div class="newRow">
+             <p id="line1"></p> <small id="line1size"></small>
+
+             </div>
+          <div class="newRow">
+             <p id="line2"></p> <small id="line2size"></small>
+          </div>
+          <div class="newRow">
+             <p id="line3"></p> <small id="line3size"></small>
+          </div>
+          <div class="newRow">
+             <p id="line4"></p> <small id="line4size"></small>
+          </div>
+          <div class="newRow">
+             <p id="line5"></p> <small id="line5size"></small>
+          </div>
+          <div class="newRow">
+             <p id="line6"></p> <small id="line6size"></small>
+          </div>
 				  </div>
 			</div>
 
 			<div class="modeHolder">
-
-				<div class="row justify-content-center col-6 col-sm-6 col-md-6 col-lg-6">
+        <div id="sizeHolder">
+        <div class="row justify-content-center col-6 col-sm-6 col-md-6 col-lg-6">
 				<button class="modeButton singleButtons" id="fourHundred" data-size="400">20/400</button>
 				<button class="modeButton singleButtons" id="threeHundred" data-size="300">20/300</button>
 				<button class="modeButton singleButtons" id="twoHundred" data-size="200">20/200</button>
@@ -451,6 +533,31 @@ button:active{
 				<button class="modeButton singleButtons " id="groupFour" data-size = "302520" style="border: 5px solid #810815">30/25/20</button>
 				<button class="modeButton singleButtons " id="groupSix" data-size = "6020" style="border: 5px solid #810815">60-20</button>
 				</div>
+      </div>
+        <div id="colorHolder">
+          <div class="row justify-content-center col-6 col-sm-6 col-md-6 col-lg-6">
+  				<button class="modeButton singleButtons" id="plate1" data-size="cp12">12</button>
+  				<button class="modeButton singleButtons" id="plate2" data-size="cp8">8</button>
+  				<button class="modeButton singleButtons" id="plate3" data-size="cp29">29</button>
+          <button class="modeButton singleButtons" id="plate4" data-size="cp51">5</button>
+        	<button class="modeButton singleButtons" id="plate5" data-size="cp3">3</button>
+          </div>
+          <div class="row justify-content-center col-6 col-sm-6 col-md-6 col-lg-6">
+  				<button class="modeButton singleButtons" id="plate6" data-size="cp15">15</button>
+  				<button class="modeButton singleButtons" id="plate7" data-size="cp74">74</button>
+          <button class="modeButton singleButtons" id="plate8" data-size="cp6">6</button>
+          <button class="modeButton singleButtons" id="plate9" data-size="cp45">45</button>
+          <button class="modeButton singleButtons" id="plate10" data-size="cp5">5</button>
+          </div>
+          <div class="row justify-content-center col-6 col-sm-6 col-md-6 col-lg-6">
+  				<button class="modeButton singleButtons" id="plate11" data-size="cp7">7</button>
+          <button class="modeButton singleButtons" id="plate12" data-size="cp16">16</button>
+          <button class="modeButton singleButtons" id="plate13" data-size="cp73">73</button>
+          <button class="modeButton singleButtons" id="plate14" data-size="cp26">26</button>
+          <button class="modeButton singleButtons" id="plate15" data-size="cp42">42</button>
+          </div>
+        </div>
+
 
 			</div>
 		</div>
@@ -484,40 +591,46 @@ button:active{
               7 = Activate "single letter" mode --OR-- press the button marked with "1"
             </li>
             <li>
-              Q = 20/400
+              8 = Activate color testing --OR-- press the button marked with "CP"
             </li>
             <li>
-              W = 20/300
+              9 = Activate retinoscopy video --OR-- press the button marked with "RS"
             </li>
             <li>
-              E = 20/200
+              Q = 20/400 --OR-- color plate '12'
             </li>
             <li>
-              R = 20/100
+              W = 20/300 --OR-- color plate '8'
             </li>
             <li>
-              T = 20/80
+              E = 20/200 --OR-- color plate '29'
             </li>
             <li>
-              Y = 20/70
+              R = 20/100 --OR-- color plate '5'
             </li>
             <li>
-              U = 20/60
+              T = 20/80 --OR-- color plate '3'
             </li>
             <li>
-              I = 20/50
+              Y = 20/70 --OR-- color plate '15'
             </li>
             <li>
-              O = 20/40
+              U = 20/60 --OR-- color plate '74'
             </li>
             <li>
-              P = 20/30
+              I = 20/50 --OR-- color plate '6'
             </li>
             <li>
-              A = 20/25
+              O = 20/40 --OR-- color plate '45'
             </li>
             <li>
-              S = 20/20
+              P = 20/30 --OR-- color plate '5'
+            </li>
+            <li>
+              A = 20/25 --OR-- color plate '7'
+            </li>
+            <li>
+              S = 20/20 --OR-- color plate '16'
             </li>
             <li>
               Z = 20/15
@@ -526,13 +639,13 @@ button:active{
               X = 20/10
             </li>
             <li>
-              D = 20/400 and 20/200 group
+              D = 20/400 and 20/200 group --OR-- color plate '73'
             </li>
             <li>
-              F = 20/100, 20/80, and 20/70 group
+              F = 20/100, 20/80, and 20/70 group --OR-- color plate '26'
             </li>
             <li>
-              G = 20/60, 20/50, 20/40 group
+              G = 20/60, 20/50, 20/40 group --OR-- color plate '42'
             </li>
             <li>
               H = 20/30, 20/25, 20/20 group
@@ -691,6 +804,7 @@ button:active{
 	<script src="/js/socket.io.js"></script>
 	<!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
 	<script src="/js/popper.min.js"></script>
+  <script src="{{asset('js/app.js')}}"></script>
 
 	<script type="text/javascript" src="/js/main2.js"></script>
 </body>

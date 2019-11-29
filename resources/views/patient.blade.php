@@ -308,8 +308,20 @@ font-family: 'Sloan';
 
 }
 
+.video{
+  display: none;
 
+}
 
+#color{
+  display: none;
+}
+
+#color img {
+
+  width: 100%;
+  max-width: 800px;
+}
 
 </style>
 
@@ -323,9 +335,11 @@ font-family: 'Sloan';
 
 
 <div id="testDisplay">
+
   <div id="content" class="text">
 
-
+    <div id="video"></div>
+    <div id="color"></div>
     <div id="patient1" class="noFlow"></div>
     <div id="patient2" class="noFlow"></div>
     <div id="patient3" class="noFlow"></div>
@@ -369,40 +383,46 @@ font-family: 'Sloan';
         7 = Activate "single letter" mode
       </li>
       <li>
-        Q = 20/400
+        8 = Activate color plate testing
       </li>
       <li>
-        W = 20/300
+        9 = Activate retinoscopy video
       </li>
       <li>
-        E = 20/200
+        Q = 20/400 --OR-- color plate '12'
       </li>
       <li>
-        R = 20/100
+        W = 20/300 --OR-- color plate '8'
       </li>
       <li>
-        T = 20/80
+        E = 20/200 --OR-- color plate '29'
       </li>
       <li>
-        Y = 20/70
+        R = 20/100 --OR-- color plate '5'
       </li>
       <li>
-        U = 20/60
+        T = 20/80 --OR-- color plate '3'
       </li>
       <li>
-        I = 20/50
+        Y = 20/70 --OR-- color plate '15'
       </li>
       <li>
-        O = 20/40
+        U = 20/60 --OR-- color plate '74'
       </li>
       <li>
-        P = 20/30
+        I = 20/50 --OR-- color plate '6'
       </li>
       <li>
-        A = 20/25
+        O = 20/40 --OR-- color plate '45'
       </li>
       <li>
-        S = 20/20
+        P = 20/30 --OR-- color plate '5'
+      </li>
+      <li>
+        A = 20/25 --OR-- color plate '7'
+      </li>
+      <li>
+        S = 20/20 --OR-- color plate '16'
       </li>
       <li>
         Z = 20/15
@@ -411,13 +431,13 @@ font-family: 'Sloan';
         X = 20/10
       </li>
       <li>
-        D = 20/400 and 20/200 group
+        D = 20/400 and 20/200 group --OR-- color plate '73'
       </li>
       <li>
-        F = 20/100, 20/80, and 20/70 group
+        F = 20/100, 20/80, and 20/70 group --OR-- color plate '26'
       </li>
       <li>
-        G = 20/60, 20/50, 20/40 group
+        G = 20/60, 20/50, 20/40 group --OR-- color plate '42'
       </li>
       <li>
         H = 20/30, 20/25, 20/20 group
@@ -578,6 +598,7 @@ Here we have the sizes of the 20/20 lines that you need to configure for each ex
 <script src="/js/jquery-3.3.1.min.js"></script>
 <script src="/js/socket.io.js"></script>
 <script src="/js/popper.min.js"></script>
+<script src="{{asset('js/app.js')}}"></script>
 
 <script>
 
@@ -590,6 +611,11 @@ function clear(){
   $("#patient4").html("").removeClass();
   $("#patient5").html("").removeClass();
   $("#patient6").html("").removeClass();
+  $("#video").html("");
+  $("#video").css('display', 'none');
+  $("#color").html('');
+  $('#color').css('display', 'none');
+  $("h2").html('');
 }
 
 
@@ -601,8 +627,8 @@ var pictures = ["k", "h", "f", "g", "b", "c", "k", "h", "f", "g", "b", "c"];
 var image = letters;
 var singleLetter = false;
 var fontType = true;
-var socket = io('http://' + location.hostname + ':8000');
-socket.on('private-default:App\\Events\\EventWasTriggered', function(data){
+var colorMode = false;
+Echo.channel('default').listen('EventWasTriggered', (data) =>{
 
   var size = data.size;
   var numbers = data.numbers;
@@ -626,6 +652,117 @@ socket.on('private-default:App\\Events\\EventWasTriggered', function(data){
    if (size == "refresh"){
      location.reload();
    }
+
+   if(size == 'retinoscopy'){
+     clear();
+     $("h2").html('');
+     $('#video').css('display', 'block');
+     $("#video").html(`<video width="1040" height="880" autoplay muted>
+                         <source src="{{asset('/images/rolypoly.webm')}}" type="video/webm">
+                       </video>`);
+   }
+
+   if(data.size == "colorPlates"){
+     colorMode = !colorMode;
+
+       clear();
+
+   }
+
+
+   if(data.size == 'cp12'){
+     clear();
+     $("#color").show();
+     $("#color").html(`<img src="{{asset('/images/Plate1.jpg')}}" />`);
+     $("h2").html("12");
+
+   }
+   if(data.size == 'cp8'){
+     clear();
+     $("#color").show();
+     $("#color").html(`<img src="{{asset('/images/Plate2.jpg')}}" />`);
+     $("h2").html("8");
+   }
+   if(data.size == 'cp29'){
+     clear();
+     $("#color").show();
+     $("#color").html(`<img src="{{asset('/images/Plate3.jpg')}}" />`);
+     $("h2").html("29");
+   }
+   if(data.size == 'cp51'){
+     clear();
+     $("#color").show();
+     $("#color").html(`<img src="{{asset('/images/Plate4.jpg')}}" />`);
+     $("h2").html("5");
+   }
+   if(data.size == 'cp3'){
+     clear();
+     $("#color").show();
+     $("#color").html(`<img src="{{asset('/images/Plate5.jpg')}}" />`);
+     $("h2").html("3");
+   }
+   if(data.size == 'cp15'){
+     clear();
+     $("#color").show();
+     $("#color").html(`<img src="{{asset('/images/Plate6.jpg')}}" />`);
+     $("h2").html("15");
+   }
+   if(data.size == 'cp74'){
+     clear();
+     $("#color").show();
+     $("#color").html(`<img src="{{asset('/images/Plate7.jpg')}}" />`);
+     $("h2").html("74");
+   }
+   if(data.size == 'cp6'){
+     clear();
+     $("#color").show();
+     $("#color").html(`<img src="{{asset('/images/Plate8.jpg')}}" />`);
+     $("h2").html("6");
+   }
+   if(data.size == 'cp45'){
+     clear();
+     $("#color").show();
+     $("#color").html(`<img src="{{asset('/images/Plate9.jpg')}}" />`);
+     $("h2").html("45");
+   }
+   if(data.size == 'cp5'){
+     clear();
+     $("#color").show();
+     $("#color").html(`<img src="{{asset('/images/Plate10.jpg')}}" />`);
+     $("h2").html("5");
+   }
+   if(data.size == 'cp7'){
+     clear();
+     $("#color").show();
+     $("#color").html(`<img src="{{asset('/images/Plate11.jpg')}}" />`);
+     $("h2").html("7");
+   }
+   if(data.size == 'cp16'){
+     clear();
+     $("#color").show();
+     $("#color").html(`<img src="{{asset('/images/Plate12.jpg')}}" />`);
+     $("h2").html("16");
+   }
+   if(data.size == 'cp73'){
+     clear();
+     $("#color").show();
+     $("#color").html(`<img src="{{asset('/images/Plate13.jpg')}}" />`);
+     $("h2").html("73");
+   }
+   if(data.size == 'cp26'){
+     clear();
+     $("#color").show();
+     $("#color").html(`<img src="{{asset('/images/Plate14.jpg')}}" />`);
+     $("h2").html("26");
+   }
+   if(data.size == 'cp42'){
+     clear();
+     $("#color").show();
+     $("#color").html(`<img src="{{asset('/images/Plate15.jpg')}}" />`);
+     $("h2").html("42");
+   }
+
+
 
 
    if(size == 10){
@@ -1107,8 +1244,7 @@ document.cookie = "mirror=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
    }
 
 });
-
-
+//replace up here
 
   $(document).ready(function(){
 
@@ -1141,60 +1277,124 @@ document.cookie = "mirror=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
         }
       }
       if (event.which == 81 ){
+        if(colorMode == false){
         numbers = 400;
+      } else{
+        numbers = 'cp12';
+      }
       };
       if (event.which == 87 ){
+        if(colorMode == false){
       numbers = 300;
+    } else {
+      numbers = 'cp8';
+    }
       };
       if (event.which == 69 ){
+        if(colorMode == false){
       numbers = 200;
+    } else {
+      numbers = 'cp29';
+    }
       };
       if (event.which == 82 ){
+        if(colorMode == false){
       numbers = 100;
+    } else {
+      numbers = 'cp51';
+    }
       };
       if (event.which == 84 ){
+        if(colorMode == false){
       numbers = 80;
+    } else {
+      numbers = 'cp3';
+    }
       };
       if (event.which == 89 ){
+        if(colorMode == false){
       numbers = 70;
+    } else {
+      numbers = 'cp15';
+    }
       };
       if (event.which == 85 ){
-      numbers = 60;
+        if(colorMode == false){
+          numbers = 60;
+        } else {
+          numbers = 'cp74';
+        }
       };
       if (event.which == 73 ){
-      numbers = 50;
+        if(colorMode == false){
+          numbers = 50;
+        } else {
+          numbers = 'cp6';
+        }
       };
       if (event.which == 79 ){
+        if(colorMode == false){
       numbers = 40;
+    } else {
+      numbers = 'cp45';
+    }
       };
       if (event.which == 80 ){
+        if(colorMode == false){
       numbers = 30;
+    } else {
+      numbers = 'cp5';
+    }
       };
       if (event.which == 65 ){
+        if(colorMode == false){
       numbers = 25;
+    } else {
+      numbers = 'cp7';
+    }
       };
       if (event.which == 83 ){
+        if(colorMode == false){
       numbers = 20;
+    } else {
+      numbers = 'cp16';
+    }
       };
       if (event.which == 90 ){
+        if(colorMode == false)
       numbers = 15;
       };
       if (event.which == 88 ){
+        if(colorMode == false)
       numbers = 10;
       };
       if (event.which == 68 ){
-      numbers = 400200;
+        if(colorMode == false){
+          numbers = 400200;
+        } else {
+          numbers = 'cp73';
+        }
       };
       if (event.which == 70 ){
+        if(colorMode == false){
       numbers = 1008070;
+    } else {
+      numbers = 'cp26';
+    }
       };
       if (event.which == 71 ){
-      numbers = 605040;
+        if(colorMode == false){
+          numbers = 605040;
+        } else {
+          numbers = 'cp42';
+        }
       };
       if (event.which == 72 ){
+        if(colorMode == false)
       numbers = 302520;
       };
       if (event.which == 74 ){
+        if(colorMode == false)
       numbers = 6020;
       };
       if (event.which == 49 ){
@@ -1232,6 +1432,12 @@ document.cookie = "mirror=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
       };
       if (event.which == 67 ){
       numbers = "refresh";
+      };
+      if (event.which == 56 ){
+      numbers = "colorPlates";
+      };
+      if (event.which == 57 ){
+      numbers = "retinoscopy";
       };
 
 

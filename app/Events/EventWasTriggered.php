@@ -47,6 +47,6 @@ class EventWasTriggered implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return new PrivateChannel('default');
+        return new Channel('default');
     }
 }
