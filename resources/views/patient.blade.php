@@ -155,12 +155,14 @@
   .tumble400 {
 
     font-size: 2000%;
+    margin-top: .3em;
 
   }
 
   .tumble300 {
 
     font-size: 1500%;
+    margin-top: .3em;
 
   }
 
@@ -168,21 +170,23 @@
 
     font-size: 1000%;
     letter-spacing: .3em;
+        margin-top: .3em;
 
   }
 
   .tumble100 {
     text-align: center;
     padding: 20px 0;
-    margin: 0;
+
     font-size: 500%;
     letter-spacing: .3em;
+        margin-top: .3em;
 
   }
 
   .tumble80 {
     padding: 20px 0;
-    margin: 0;
+        margin-top: .3em;
     font-size: 400%;
     letter-spacing: .35em;
 
@@ -190,14 +194,14 @@
 
   .tumble70 {
     padding: 20px 0;
-    margin: 0;
+        margin-top: .3em;
     font-size: 350%;
     letter-spacing: .3em;
   }
 
   .tumble60 {
     padding: 20px 20px;
-    margin: 0;
+        margin-top: .3em;
     font-size: 300%;
     letter-spacing: .3em;
 
@@ -206,7 +210,7 @@
 
   .tumble50 {
     padding: 20px 20px;
-    margin: 0;
+        margin-top: .3em;
     font-size: 250%;
     letter-spacing: .25em;
 
@@ -215,7 +219,7 @@
 
   .tumble40 {
     padding: 20px 20px;
-    margin: 0;
+        margin-top: .3em;
     font-size: 200%;
     letter-spacing: .2em;
 ;
@@ -223,7 +227,7 @@
 
   .tumble30 {
     padding: 20px 20px;
-    margin: 0;
+        margin-top: .3em;
     font-size: 150%;
     letter-spacing: .15em;
 
@@ -231,7 +235,7 @@
 
   .tumble25 {
     padding: 20px 20px;
-    margin: 0;
+        margin-top: .3em;
     font-size: 125%;
     letter-spacing: .125em;
 
@@ -240,21 +244,21 @@
 
   .tumble20 {
     padding: 20px 20px;
-    margin: 0;
+    margin-top: .3em;
     font-size: 100%;
     letter-spacing: .1em;
 
   }
   .tumble15 {
     padding: 20px 20px;
-    margin: 0;
+        margin-top: .3em;
     font-size: 75%;
     letter-spacing: .1em;
 
   }
   .tumble10 {
     padding: 20px 20px;
-    margin: 0;
+        margin-top: .3em;
     font-size: 50%;
     letter-spacing: .1em;
 
