@@ -312,19 +312,37 @@ font-family: 'Sloan';
 
 }
 
-.video{
+#video{
   display: none;
-
+  width: 100%;
+  height:100%;
+  position: relative;
+}
+#video video{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
 }
 
 #color{
   display: none;
+  width: 100%;
+  height:100%;
+  position: relative;
 }
 
 #color img {
-
-  width: 100%;
-  max-width: 800px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+  height: 100%;
 }
 
 </style>
@@ -1030,6 +1048,7 @@ Echo.channel('default').listen('EventWasTriggered', (data) =>{
     $("h2").html("20/100 <br /> 20/80 <br /> 20/70");
   }
    if (data.size == 605040 ){
+
      clear();
 
      firstLine.className = ("tumble60");
