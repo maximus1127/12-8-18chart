@@ -430,6 +430,11 @@ small{
   display: none;
 }
 
+.soloLine{
+  padding-left: 5px;
+  padding-right: 3px;
+}
+
 </style>
 </head>
 
@@ -465,25 +470,12 @@ small{
         <button class="singleButtons colorPlates" id="colorPlates" data-size="colorPlates">CP</button>
 				<button class="singleButtons" id="refresh" data-size="refresh">R</button>
 				<div class="lineContent text">
-          <div class="newRow">
-             <p id="line1"></p> <small id="line1size"></small>
-
-             </div>
-          <div class="newRow">
-             <p id="line2"></p> <small id="line2size"></small>
-          </div>
-          <div class="newRow">
-             <p id="line3"></p> <small id="line3size"></small>
-          </div>
-          <div class="newRow">
-             <p id="line4"></p> <small id="line4size"></small>
-          </div>
-          <div class="newRow">
-             <p id="line5"></p> <small id="line5size"></small>
-          </div>
-          <div class="newRow">
-             <p id="line6"></p> <small id="line6size"></small>
-          </div>
+             <p id="line1" class="soloLine singleButtons" data-size="solo1"></p>
+             <p id="line2" class="soloLine singleButtons" data-size="solo2"></p>
+             <p id="line3" class="soloLine singleButtons" data-size="solo3"></p>
+             <p id="line4" class="soloLine singleButtons" data-size="solo4"></p>
+             <p id="line5" class="soloLine singleButtons" data-size="solo5"></p>
+             <p id="line6" class="soloLine singleButtons" data-size="solo6"></p>
 				  </div>
 			</div>
 

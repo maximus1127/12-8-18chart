@@ -345,6 +345,10 @@ font-family: 'Sloan';
   height: 100%;
 }
 
+.lineSolo{
+  visibility: hidden;
+}
+
 </style>
 
 </head>
@@ -362,12 +366,12 @@ font-family: 'Sloan';
 
     <div id="video"></div>
     <div id="color"></div>
-    <div id="patient1" class="noFlow"></div>
-    <div id="patient2" class="noFlow"></div>
-    <div id="patient3" class="noFlow"></div>
-    <div id="patient4" class="noFlow"></div>
-    <div id="patient5" class="noFlow"></div>
-    <div id="patient6" class="noFlow"></div>
+    <div id="patient1" class="noFlow" data-size="solo1" data-keepClass="soloLine"></div>
+    <div id="patient2" class="noFlow" data-size="solo2" data-keepClass="soloLine"></div>
+    <div id="patient3" class="noFlow" data-size="solo3" data-keepClass="soloLine"></div>
+    <div id="patient4" class="noFlow" data-size="solo4" data-keepClass="soloLine"></div>
+    <div id="patient5" class="noFlow" data-size="solo5" data-keepClass="soloLine"></div>
+    <div id="patient6" class="noFlow" data-size="solo6" data-keepClass="soloLine"></div>
 
   </div>
 
@@ -638,6 +642,7 @@ function clear(){
   $("#color").html('');
   $('#color').css('display', 'none');
   $("h2").html('');
+
 }
 
 
@@ -652,6 +657,19 @@ var fontType = true;
 var colorMode = false;
 Echo.channel('default').listen('EventWasTriggered', (data) =>{
 
+  if(data.size.includes('solo')){
+    var divs = $('[data-keepClass]');
+
+    $(divs).each(function(e){
+      if($(this).data('size') != data.size){
+        $(this).addClass('lineSolo')
+      }else{
+        $(this).removeClass('lineSolo')
+      }
+    })
+  }
+
+
   var size = data.size;
   var numbers = data.numbers;
   var numbers2 = data.numbers2;
@@ -659,6 +677,9 @@ Echo.channel('default').listen('EventWasTriggered', (data) =>{
   var numbers4 = data.numbers4;
   var numbers5 = data.numbers5;
   var numbers6 = data.numbers6;
+
+
+
 
 
    firstLine = document.getElementById("patient1");
@@ -1265,6 +1286,8 @@ document.cookie = "mirror=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
      });
 
    }
+
+
 
 });
 //replace up here

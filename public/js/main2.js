@@ -1,7 +1,7 @@
-var letters = ["C", "D", "H", "K", "N", "O", "R", "S", "V", "Z"];
-var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9" , "5"];
-var ees = ["d","j","i","e", "d","j","i","e","i","j"];
-var pictures = ["k", "h", "f", "g", "b", "c", "k", "h", "f", "g", "b", "c"];
+var letters = [" C", " D", " H", " K", " N", " O", " R", " S", " V", " Z"];
+var numbers = [" 1", " 2", " 3", " 4", " 5", " 6", " 7", " 8", " 9" , " 5"];
+var ees = [" d"," j"," i"," e", " d"," j"," i"," e"," i"," j"];
+var pictures = [" k", " h", " f", " g", " b", " c", " k", " h", " f", " g", " b", " c"];
 var image = letters;
 var fontType = true;
 var singleLetter = false;
@@ -12,6 +12,17 @@ var colorMode = false;
 Echo.channel('default').listen('EventWasTriggered', (data) =>{
 
 
+
+if(data.size.includes('solo')){
+  $('.soloLine').each(function(e){
+    // console.log($(this).data('size'))
+    if($(this).data('size') == data.size){
+      $(this).css('background-color', '#e0e0e0');
+    } else {
+      $(this).css('background-color', '')
+    }
+  })
+}
 
 
 // var socket = io('http://' + location.hostname + ':8000');
@@ -420,6 +431,9 @@ function clear(){
   $("#line5size").html("");
   $("#line6size").html("");
   $("#retinoscopy").removeClass('retinoscopyActive').addClass('retinoscopy');
+  $(".soloLine").each(function(){
+    $(this).css('background-color', '');
+  })
 
 }
 
