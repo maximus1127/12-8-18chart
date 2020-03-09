@@ -433,6 +433,7 @@ small{
 .soloLine{
   padding-left: 5px;
   padding-right: 3px;
+  cursor: pointer;
 }
 
 </style>
