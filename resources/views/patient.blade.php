@@ -354,7 +354,7 @@ font-family: 'Sloan';
 </head>
 
 
-<body>
+<body onload="initialTrigger()">
 
 
 <div id="background"></div>
@@ -472,10 +472,10 @@ font-family: 'Sloan';
         J = 20/60 through 20/20 group
       </li>
       <li>
-        Arrow Up = Calibration button to set letters to larger size
+        Plus/Equals = Calibration button to set letters to larger size
       </li>
       <li>
-        Arrow Down = Calibration buttons to set letters to smaller size
+        Minus/Underscore = Calibration buttons to set letters to smaller size
       </li>
       <li>
         M = Calibration button to make letters a mirror image
@@ -655,7 +655,10 @@ var image = letters;
 var singleLetter = false;
 var fontType = true;
 var colorMode = false;
+var currentLine;
+var currentOptions = ['400', '300', '200', '100', '80', '70', '60', '50', '40', '30', '25', '20', '15', '10', '400200', '1008070', '605040', '302520', '6020'];
 Echo.channel('default').listen('EventWasTriggered', (data) =>{
+currentLine = data.size
 
   if(data.size.includes('solo')){
     var divs = $('[data-keepClass]');
@@ -707,9 +710,7 @@ Echo.channel('default').listen('EventWasTriggered', (data) =>{
 
    if(data.size == "colorPlates"){
      colorMode = !colorMode;
-
        clear();
-
    }
 
 
@@ -1461,10 +1462,10 @@ document.cookie = "mirror=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
       if (event.which == 54 ){
       numbers = "mute";
       };
-      if (event.which == 40 ){
+      if (event.which == 189 ){
       numbers = "shrink";
       };
-      if (event.which == 38 ){
+      if (event.which == 187 ){
       numbers = "grow";
       };
       if (event.which == 77 ){
@@ -1485,6 +1486,22 @@ document.cookie = "mirror=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
       if (event.which == 57 ){
       numbers = "retinoscopy";
       };
+      if (event.which == 33 || event.which == 38){
+        event.preventDefault()
+        if(colorMode == false){
+        if(currentLine != '400'){
+          numbers = currentOptions[(currentOptions.indexOf(currentLine) - 1)]
+        }
+        }
+      }
+      if (event.which == 34 || event.which == 40){
+        event.preventDefault()
+        if(colorMode == false){
+        if(currentLine != '6020'){
+        numbers = currentOptions[(currentOptions.indexOf(currentLine) + 1)]
+        }
+      }
+    }
 
 
       $.ajax({
@@ -1558,6 +1575,19 @@ if (RTCPeerConnection) (function () {
 
 
 });
+
+function initialTrigger(){
+  $.ajax({
+    url: '/a',
+    data: {
+      'size': 20,
+    },
+    success: function(response){
+      // $("p").html(response + ": " + numbers);
+      // console.log(response);
+    }
+})
+}
 
 
 </script>

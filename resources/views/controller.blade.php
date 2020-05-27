@@ -483,30 +483,30 @@ small{
 			<div class="modeHolder">
         <div id="sizeHolder">
         <div class="row justify-content-center col-6 col-sm-6 col-md-6 col-lg-6">
-				<button class="modeButton singleButtons" id="fourHundred" data-size="400">20/400</button>
-				<button class="modeButton singleButtons" id="threeHundred" data-size="300">20/300</button>
-				<button class="modeButton singleButtons" id="twoHundred" data-size="200">20/200</button>
+				<button class="modeButton singleButtons" data-clicker='1' id="fourHundred" data-size="400">20/400</button>
+				<button class="modeButton singleButtons" data-clicker="2" id="threeHundred" data-size="300">20/300</button>
+				<button class="modeButton singleButtons" data-clicker="3" id="twoHundred" data-size="200">20/200</button>
         	{{-- </div>
         <div class="row justify-content-center col-sm-3 col-md-3 col-lg-6"> --}}
-          <button class="modeButton singleButtons" id="oneHundred" data-size="100">20/100</button>
-          <button class="modeButton singleButtons" id="eighty" data-size="80">20/80</button>
-          <button class="modeButton singleButtons" id="seventy" data-size="70">20/70</button>
-          <button class="modeButton singleButtons" id="sixty" data-size="60">20/60</button>
+          <button class="modeButton singleButtons" data-clicker="4" id="oneHundred" data-size="100">20/100</button>
+          <button class="modeButton singleButtons" data-clicker="5" id="eighty" data-size="80">20/80</button>
+          <button class="modeButton singleButtons" data-clicker="6" id="seventy" data-size="70">20/70</button>
+          <button class="modeButton singleButtons" data-clicker="7" id="sixty" data-size="60">20/60</button>
 
         </div>
 
 
 
 				<div class="row justify-content-center col-6 col-sm-6 col-md-6 col-lg-6">
-  <button class="modeButton singleButtons" id="fifty" data-size="50">20/50</button>
-				<button class="modeButton singleButtons" id="forty" data-size="40">20/40</button>
+          <button class="modeButton singleButtons" data-clicker="8" id="fifty" data-size="50">20/50</button>
+				  <button class="modeButton singleButtons" data-clicker="9" id="forty" data-size="40">20/40</button>
       {{-- </div>
             <div class="row justify-content-center col-sm-3 col-md-3 col-lg-6"> --}}
-				<button class="modeButton singleButtons" id="thirty" data-size="30">20/30</button>
-				<button class="modeButton singleButtons" id="twentyFive" data-size="25">20/25</button>
-				<button class="modeButton singleButtons" id="twenty" data-size="20">20/20</button>
-        <button class="modeButton singleButtons" id="fifteen" data-size="15">20/15</button>
-        <button class="modeButton singleButtons" id="ten" data-size="10">20/10</button>
+				<button class="modeButton singleButtons" data-clicker="10" id="thirty" data-size="30">20/30</button>
+				<button class="modeButton singleButtons" data-clicker="11" id="twentyFive" data-size="25">20/25</button>
+				<button class="modeButton singleButtons" data-clicker="12" id="twenty" data-size="20">20/20</button>
+        <button class="modeButton singleButtons" data-clicker="13" id="fifteen" data-size="15">20/15</button>
+        <button class="modeButton singleButtons" data-clicker="14" id="ten" data-size="10">20/10</button>
 				</div>
 
 				<div class="row justify-content-center">
@@ -514,17 +514,17 @@ small{
 				</div>
 
 				<div class="row justify-content-center">
-				<!--button class="modeButton singleButtons" id="groupOne"  data-size = "400200" style="border: 5px solid #847777">400/200</button>
-				<button class="modeButton singleButtons" id="groupTwo" data-size = "1008070" style="border: 5px solid #847777">100/80/70</button>
-				<button class="modeButton singleButtons" id="groupThree" data-size = "605040" style="border: 5px solid #847777">60/50/40</button>
-				<button class="modeButton singleButtons" id="groupFour" data-size = "302520" style="border: 5px solid #847777">30/25/20</button>
-				<button class="modeButton singleButtons" id="groupSix" data-size = "6020" style="border: 5px solid #847777">60-20</button-->
+				<!--button class="modeButton singleButtons" data-clicker="" id="groupOne"  data-size = "400200" style="border: 5px solid #847777">400/200</button>
+				<button class="modeButton singleButtons" data-clicker="" id="groupTwo" data-size = "1008070" style="border: 5px solid #847777">100/80/70</button>
+				<button class="modeButton singleButtons" data-clicker="" id="groupThree" data-size = "605040" style="border: 5px solid #847777">60/50/40</button>
+				<button class="modeButton singleButtons" data-clicker="" id="groupFour" data-size = "302520" style="border: 5px solid #847777">30/25/20</button>
+				<button class="modeButton singleButtons" data-clicker="" id="groupSix" data-size = "6020" style="border: 5px solid #847777">60-20</button-->
 
-				<button class="modeButton singleButtons " id="groupOne"  data-size = "400200" style="border: 5px solid #810815">400/200</button>
-        <button class="modeButton singleButtons " id="groupTwo" data-size = "1008070" style="border: 5px solid #810815">100/80/70</button>
-        <button class="modeButton singleButtons " id="groupThree" data-size = "605040" style="border: 5px solid #810815">60/50/40</button>
-				<button class="modeButton singleButtons " id="groupFour" data-size = "302520" style="border: 5px solid #810815">30/25/20</button>
-				<button class="modeButton singleButtons " id="groupSix" data-size = "6020" style="border: 5px solid #810815">60-20</button>
+				<button class="modeButton singleButtons"  data-clicker="15" id="groupOne"  data-size = "400200" style="border: 5px solid #810815">400/200</button>
+        <button class="modeButton singleButtons"  data-clicker="16" id="groupTwo" data-size = "1008070" style="border: 5px solid #810815">100/80/70</button>
+        <button class="modeButton singleButtons"  data-clicker="17" id="groupThree" data-size = "605040" style="border: 5px solid #810815">60/50/40</button>
+				<button class="modeButton singleButtons"  data-clicker="18" id="groupFour" data-size = "302520" style="border: 5px solid #810815">30/25/20</button>
+				<button class="modeButton singleButtons"  data-clicker="19" id="groupSix" data-size = "6020" style="border: 5px solid #810815">60-20</button>
 				</div>
       </div>
         <div id="colorHolder">
@@ -647,10 +647,10 @@ small{
               J = 20/60 through 20/20 group
             </li>
             <li>
-              Arrow Up = Calibration button to set letters to larger size
+              Plus/Equals = Calibration button to set letters to larger size
             </li>
             <li>
-              Arrow Down = Calibration buttons to set letters to smaller size
+              Minus/Underscore = Calibration buttons to set letters to smaller size
             </li>
             <li>
               M = Calibration button to make letters a mirror image

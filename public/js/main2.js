@@ -6,11 +6,70 @@ var image = letters;
 var fontType = true;
 var singleLetter = false;
 var colorMode = false;
+var currentLine;
 
 
 
 Echo.channel('default').listen('EventWasTriggered', (data) =>{
-
+  switch(data.size) {
+    case "10":
+      currentLine = 14;
+      break;
+    case "15":
+      currentLine = 13
+      break;
+      case "20":
+        currentLine = 12
+        break;
+        case "25":
+          currentLine = 11
+          break;
+          case "30":
+            currentLine = 10
+            break;
+            case "40":
+              currentLine = 9
+              break;
+              case "50":
+                currentLine = 8
+                break;
+                case "60":
+                  currentLine = 7
+                  break;
+                  case "70":
+                    currentLine = 6
+                    break;
+                    case "80":
+                      currentLine = 5
+                      break;
+                      case "100":
+                        currentLine = 4
+                        break;
+                        case "200":
+                          currentLine = 3
+                          break;
+                          case "300":
+                            currentLine = 2
+                            break;
+                            case "400":
+                              currentLine = 1
+                              break;
+                              case "400200":
+                                currentLine = 15
+                                break;
+                                case "1008070":
+                                  currentLine = 16
+                                  break;
+                                  case "605040":
+                                    currentLine = 17
+                                    break;
+                                    case 302520:
+                                      currentLine = 18
+                                      break;
+                                      case 6020:
+                                        currentLine = 19
+                                        break;
+  }
 
 
 if(data.size.includes('solo')){
@@ -157,6 +216,7 @@ $(".lineButtonActive").trigger('click');
   }
   if(data.size == 10 || data.size == 15 || data.size == 20 || data.size == 25 || data.size == 30 || data.size == 40 || data.size == 50 || data.size == 60 || data.size == 70){
       clear();
+
 
       if(fontType == false && singleLetter == false){
     $('#line1').html("<img src='/images/" + image[size[1]] + "'/> <img src='/images/" + image[size[2]] + "' /> <img src='/images/" + image[size[3]] + "' /> <img src='/images/" + image[size[4]] + "' /> <img src='/images/" + image[size[0]] + "' />" );
@@ -439,6 +499,7 @@ function clear(){
 
 function initialTrigger(){
   $("#singleLetter").trigger("click");
+  $("#twenty").trigger('click');
 }
 
  $(document).ready(function(){
@@ -608,10 +669,10 @@ if (event.which == 53 ){
 if (event.which == 54 ){
  $( "#mute" ).trigger( "click" );
 };
-if (event.which == 40 ){
+if (event.which == 189 ){
  $( "#zoomOut" ).trigger( "click" );
 };
-if (event.which == 38 ){
+if (event.which == 187 ){
  $( "#zoomIn" ).trigger( "click" );
 };
 if (event.which == 77 ){
@@ -632,4 +693,23 @@ if (event.which == 57 ){
 if (event.which == 67 ){
  $( "#refresh" ).trigger( "click" );
 };
+if (event.which == 33 || event.which == 38){
+  if (!$("#colorPlates").hasClass("colorPlatesActive")){
+  event.preventDefault()
+  if(currentLine > 1){
+  currentLine --;
+}
+  $("button[data-clicker='"+ currentLine +"']").trigger('click')
+}
+}
+if (event.which == 34 || event.which == 40){
+  if (!$("#colorPlates").hasClass("colorPlatesActive")){
+  event.preventDefault()
+  if(currentLine < 19){
+  currentLine ++;
+}
+
+  $("button[data-clicker='"+ currentLine +"']").trigger('click')
+}
+}
 });
