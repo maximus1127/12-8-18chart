@@ -655,7 +655,11 @@ var image = letters;
 var singleLetter = false;
 var fontType = true;
 var colorMode = false;
+var hotv = ['&nbsp;H', '&nbsp;O', '&nbsp;T', '&nbsp;V'];
+var hotvActive = false;
 var currentLine;
+var movie = 0;
+var movieArray = ['Moana.mp4', 'Cars.mp4', 'Frozen.mp4', 'Finding_Dory.mp4'];
 var currentOptions = ['400', '300', '200', '100', '80', '70', '60', '50', '40', '30', '25', '20', '15', '10', '400200', '1008070', '605040', '302520', '6020'];
 Echo.channel('default').listen('EventWasTriggered', (data) =>{
 currentLine = data.size
@@ -707,6 +711,23 @@ currentLine = data.size
                          <source src="{{asset('/images/rolypoly.webm')}}" type="video/webm">
                        </video>`);
    }
+
+   if(size == "movie"){
+     clear();
+     $("h2").html('');
+     $('#video').css('display', 'block');
+     $("#video").html(`<video width="1040" height="880" autoplay controls>
+                         <source src="/images/${movieArray[movie]}" type="video/mp4">
+                       </video>`);
+    if(movie == 3){
+      movie = 0
+    } else {
+      movie ++
+    }
+   }
+
+
+
 
    if(data.size == "colorPlates"){
      colorMode = !colorMode;
@@ -821,6 +842,12 @@ currentLine = data.size
   } if (singleLetter == false && fontType == true){
     $("#patient1").html( "&nbsp" +image[numbers[1]] +" "+  image[numbers[2]] + " " + image[numbers[3]] + " " +  image[numbers[4]] + " " + image[numbers[0]]);
   }
+    if(hotvActive == true && singleLetter == false){
+      $('#patient1').html(image[data.hotv[0]] +' '+ image[data.hotv[1]] +' '+ image[data.hotv[2]] +' '+ image[data.hotv[3]])
+    }
+    if(hotvActive == true && singleLetter == true){
+        $('#patient1').html(image[data.hotv[0]])
+    }
 
     $("h2").html("20/"+size);
    }
@@ -839,7 +866,12 @@ currentLine = data.size
     $("#patient1").html("<img src='/images/" + image[numbers[1]] + "'/> <img src='/images/" + image[numbers[2]] + "' /> <img src='/images/" + image[numbers[3]] + "' /> <img src='/images/" + image[numbers[4]] + "' /> <img src='/images/" + image[numbers[0]] + "' />" );
   } if (singleLetter == false && fontType == true){
     $("#patient1").html( "&nbsp" +image[numbers[1]] +" "+  image[numbers[2]] + " " + image[numbers[3]] + " " +  image[numbers[4]] + " " + image[numbers[0]]);
-  }
+  }    if(hotvActive == true && singleLetter == false){
+        $('#patient1').html(image[data.hotv[0]] +' '+ image[data.hotv[1]] +' '+ image[data.hotv[2]] +' '+ image[data.hotv[3]])
+      }
+      if(hotvActive == true && singleLetter == true){
+          $('#patient1').html(image[data.hotv[0]])
+      }
 
     $("h2").html("20/"+size);
    }
@@ -858,7 +890,12 @@ currentLine = data.size
  } if (singleLetter == false && fontType == true){
    $("#patient1").html( "&nbsp" +image[numbers[1]] +" "+  image[numbers[2]] + " " + image[numbers[3]] + " " +  image[numbers[4]] + " " + image[numbers[0]]);
  }
-
+ if(hotvActive == true && singleLetter == false){
+   $('#patient1').html(image[data.hotv[0]] +' '+ image[data.hotv[1]] +' '+ image[data.hotv[2]] +' '+ image[data.hotv[3]])
+ }
+ if(hotvActive == true && singleLetter == true){
+     $('#patient1').html(image[data.hotv[0]])
+ }
    $("h2").html("20/"+size);
   }
   if(size == 25){
@@ -872,7 +909,12 @@ currentLine = data.size
    $("#patient1").html("<img src='/images/" + image[numbers[1]] + "'/> <img src='/images/" + image[numbers[2]] + "' /> <img src='/images/" + image[numbers[3]] + "' /> <img src='/images/" + image[numbers[4]] + "' /> <img src='/images/" + image[numbers[0]] + "' />" );
  } if (singleLetter == false && fontType == true){
    $("#patient1").html( "&nbsp" +image[numbers[1]] +" "+  image[numbers[2]] + " " + image[numbers[3]] + " " +  image[numbers[4]] + " " + image[numbers[0]]);
- }
+ }    if(hotvActive == true && singleLetter == false){
+       $('#patient1').html(image[data.hotv[0]] +' '+ image[data.hotv[1]] +' '+ image[data.hotv[2]] +' '+ image[data.hotv[3]])
+     }
+     if(hotvActive == true && singleLetter == true){
+         $('#patient1').html(image[data.hotv[0]])
+     }
   $("h2").html("20/"+size);
 
   }
@@ -887,7 +929,12 @@ currentLine = data.size
    $("#patient1").html("<img src='/images/" + image[numbers[1]] + "'/> <img src='/images/" + image[numbers[2]] + "' /> <img src='/images/" + image[numbers[3]] + "' /> <img src='/images/" + image[numbers[4]] + "' /> <img src='/images/" + image[numbers[0]] + "' />" );
   } if (singleLetter == false && fontType == true){
    $("#patient1").html( "&nbsp" +image[numbers[1]] +" "+  image[numbers[2]] + " " + image[numbers[3]] + " " +  image[numbers[4]] + " " + image[numbers[0]]);
-  }
+  }    if(hotvActive == true && singleLetter == false){
+        $('#patient1').html(image[data.hotv[0]] +' '+ image[data.hotv[1]] +' '+ image[data.hotv[2]] +' '+ image[data.hotv[3]])
+      }
+      if(hotvActive == true && singleLetter == true){
+          $('#patient1').html(image[data.hotv[0]])
+      }
    $("h2").html("20/"+size);
 
   }
@@ -902,7 +949,12 @@ currentLine = data.size
    $("#patient1").html("<img src='/images/" + image[numbers[1]] + "'/> <img src='/images/" + image[numbers[2]] + "' /> <img src='/images/" + image[numbers[3]] + "' /> <img src='/images/" + image[numbers[4]] + "' /> <img src='/images/" + image[numbers[0]] + "' />" );
   } if (singleLetter == false && fontType == true){
    $("#patient1").html( "&nbsp" +image[numbers[1]] +" "+  image[numbers[2]] + " " + image[numbers[3]] + " " +  image[numbers[4]] + " " + image[numbers[0]]);
-  }
+  }    if(hotvActive == true && singleLetter == false){
+        $('#patient1').html(image[data.hotv[0]] +' '+ image[data.hotv[1]] +' '+ image[data.hotv[2]] +' '+ image[data.hotv[3]])
+      }
+      if(hotvActive == true && singleLetter == true){
+          $('#patient1').html(image[data.hotv[0]])
+      }
   $("h2").html("20/"+size);
 
   }
@@ -917,7 +969,12 @@ currentLine = data.size
    $("#patient1").html("<img src='/images/" + image[numbers[1]] + "'/> <img src='/images/" + image[numbers[2]] + "' /> <img src='/images/" + image[numbers[3]] + "' /> <img src='/images/" + image[numbers[4]] + "' /> <img src='/images/" + image[numbers[0]] + "' />" );
   } if (singleLetter == false && fontType == true){
    $("#patient1").html( "&nbsp" +image[numbers[1]] +" "+  image[numbers[2]] + " " + image[numbers[3]] + " " +  image[numbers[4]] + " " + image[numbers[0]]);
-  }
+  }    if(hotvActive == true && singleLetter == false){
+        $('#patient1').html(image[data.hotv[0]] +' '+ image[data.hotv[1]] +' '+ image[data.hotv[2]] +' '+ image[data.hotv[3]])
+      }
+      if(hotvActive == true && singleLetter == true){
+          $('#patient1').html(image[data.hotv[0]])
+      }
    $("h2").html("20/"+size);
 
   }
@@ -932,7 +989,12 @@ currentLine = data.size
    $("#patient1").html("<img src='/images/" + image[numbers[1]] + "'/> <img src='/images/" + image[numbers[2]] + "' /> <img src='/images/" + image[numbers[3]] + "' /> <img src='/images/" + image[numbers[4]] + "' /> <img src='/images/" + image[numbers[0]] + "' />" );
   } if (singleLetter == false && fontType == true){
    $("#patient1").html("&nbsp" + image[numbers[1]] +" "+  image[numbers[2]] + " " + image[numbers[3]] + " " +  image[numbers[4]] + " " + image[numbers[0]]);
-  }
+  }    if(hotvActive == true && singleLetter == false){
+        $('#patient1').html(image[data.hotv[0]] +' '+ image[data.hotv[1]] +' '+ image[data.hotv[2]] +' '+ image[data.hotv[3]])
+      }
+      if(hotvActive == true && singleLetter == true){
+          $('#patient1').html(image[data.hotv[0]])
+      }
   $("h2").html("20/"+size);
 
   }
@@ -947,7 +1009,12 @@ currentLine = data.size
    $("#patient1").html("<img src='/images/" + image[numbers[1]] + "'/> <img src='/images/" + image[numbers[2]] + "' /> <img src='/images/" + image[numbers[3]] + "' /> <img src='/images/" + image[numbers[4]] + "' /> <img src='/images/" + image[numbers[0]] + "' />" );
   } if (singleLetter == false && fontType == true){
    $("#patient1").html("&nbsp" + image[numbers[1]] +" "+  image[numbers[2]] + " " + image[numbers[3]] + " " +  image[numbers[4]] + " " + image[numbers[0]]);
-  }
+  }    if(hotvActive == true && singleLetter == false){
+        $('#patient1').html(image[data.hotv[0]] +' '+ image[data.hotv[1]] +' '+ image[data.hotv[2]] +' '+ image[data.hotv[3]])
+      }
+      if(hotvActive == true && singleLetter == true){
+          $('#patient1').html(image[data.hotv[0]])
+      }
    $("h2").html("20/"+size);
 
   }
@@ -962,7 +1029,12 @@ currentLine = data.size
    $("#patient1").html("<img src='/images/" + image[numbers[1]] + "'/> <img src='/images/" + image[numbers[2]] + "' /> <img src='/images/" + image[numbers[3]] + "' /> <img src='/images/" + image[numbers[4]] + "' />" );
   } if (singleLetter == false && fontType == true){
    $("#patient1").html( "&nbsp" +image[numbers[1]] +" "+  image[numbers[2]] + " " + image[numbers[3]] + " " +  image[numbers[4]]);
-  }
+  }    if(hotvActive == true && singleLetter == false){
+        $('#patient1').html(image[data.hotv[0]] +' '+ image[data.hotv[1]] +' '+ image[data.hotv[2]] +' '+ image[data.hotv[3]])
+      }
+      if(hotvActive == true && singleLetter == true){
+          $('#patient1').html(image[data.hotv[0]])
+      }
   $("h2").html("20/"+size);
 
   }
@@ -977,7 +1049,12 @@ currentLine = data.size
    $("#patient1").html("<img src='/images/" + image[numbers[1]] + "'/> <img src='/images/" + image[numbers[2]] + "' /> <img src='/images/" + image[numbers[3]] + "' />" );
   } if (singleLetter == false && fontType == true){
    $("#patient1").html("&nbsp" + image[numbers[1]] +" "+  image[numbers[2]] + " " + image[numbers[3]]);
-  }
+  }    if(hotvActive == true && singleLetter == false){
+        $('#patient1').html(image[data.hotv[0]] +' '+ image[data.hotv[1]] +' '+ image[data.hotv[2]])
+      }
+      if(hotvActive == true && singleLetter == true){
+          $('#patient1').html(image[data.hotv[0]])
+      }
    $("h2").html("20/"+size);
 
   }
@@ -992,7 +1069,12 @@ currentLine = data.size
    $("#patient1").html("<img src='/images/" + image[numbers[1]] + "'/> <img src='/images/" + image[numbers[2]] + "'  />" );
  } if (singleLetter == false && fontType == true){
    $("#patient1").html( "&nbsp" +image[numbers[1]] +" "+  image[numbers[2]]);
- }
+ }    if(hotvActive == true && singleLetter == false){
+       $('#patient1').html(image[data.hotv[0]] +' '+ image[data.hotv[1]])
+     }
+     if(hotvActive == true && singleLetter == true){
+         $('#patient1').html(image[data.hotv[0]])
+     }
 
   $("h2").html("20/"+size);
 
@@ -1008,7 +1090,12 @@ currentLine = data.size
    $("#patient1").html("<img src='/images/" + image[numbers[1]] + "' />" );
  } if (singleLetter == false && fontType == true){
    $("#patient1").html("&nbsp" + image[numbers[1]] );
- }
+ }    if(hotvActive == true && singleLetter == false){
+       $('#patient1').html(image[data.hotv[0]])
+     }
+     if(hotvActive == true && singleLetter == true){
+         $('#patient1').html(image[data.hotv[0]])
+     }
    $("h2").html("20/"+size);
 
   }
@@ -1023,7 +1110,12 @@ currentLine = data.size
    $("#patient1").html("<img src='/images/" + image[numbers[1]] + "' />" );
  } if (singleLetter == false && fontType == true){
    $("#patient1").html( "&nbsp" +image[numbers[1]] );
- }
+ }    if(hotvActive == true && singleLetter == false){
+       $('#patient1').html(image[data.hotv[0]])
+     }
+     if(hotvActive == true && singleLetter == true){
+         $('#patient1').html(image[data.hotv[0]])
+     }
   $("h2").html("20/"+size);
   }
 
@@ -1041,7 +1133,14 @@ currentLine = data.size
 } if (singleLetter == false && fontType == true){
   $("#patient1").html("&nbsp;"+ image[numbers[1]] );
      $("#patient2").html( "&nbsp"+image[numbers2[0]] +" "+  image[numbers2[1]]);
-}
+}    if(hotvActive == true && singleLetter == false){
+      $('#patient1').html(image[data.hotv[0]])
+      $('#patient2').html(image[data.hotv2[0]] +' '+image[data.hotv2[1]])
+    }
+    if(hotvActive == true && singleLetter == true){
+        $('#patient1').html(image[data.hotv[0]])
+        $('#patient2').html(image[data.hotv2[0]])
+    }
     $("h2").html("20/400 <br /> 20/200");
 
   }
@@ -1066,7 +1165,16 @@ currentLine = data.size
     $("#patient1").html( "&nbsp"+image[numbers[1]] + " " + image[numbers[2]] + " "+ image[numbers[3]]);
     $("#patient2").html( "&nbsp"+image[numbers2[0]] + " " + image[numbers2[1]] + " "+ image[numbers2[2]] + " "+ image[numbers2[3]] );
     $("#patient3").html( "&nbsp"+image[numbers3[0]] + " " + image[numbers3[1]] + " "+ image[numbers3[2]] + " "+ image[numbers3[3]] + " "+ image[numbers3[4]] );
-  }
+  }    if(hotvActive == true && singleLetter == false){
+        $('#patient1').html(image[data.hotv[0]] +' '+image[data.hotv[1]] +' '+ image[data.hotv[2]])
+        $('#patient2').html(image[data.hotv2[0]] +' '+image[data.hotv2[1]] +' '+ image[data.hotv2[2]] +' '+image[data.hotv2[3]])
+        $('#patient3').html(image[data.hotv3[0]] +' '+image[data.hotv3[1]] +' '+ image[data.hotv3[2]] +' '+image[data.hotv3[3]])
+      }
+      if(hotvActive == true && singleLetter == true){
+          $('#patient1').html(image[data.hotv[0]])
+          $('#patient2').html(image[data.hotv2[0]])
+          $('#patient3').html(image[data.hotv3[0]])
+      }
     $("h2").html("20/100 <br /> 20/80 <br /> 20/70");
   }
    if (data.size == 605040 ){
@@ -1093,7 +1201,16 @@ currentLine = data.size
    $("#patient2").html(image[numbers[2]]);
    $("#patient3").html(image[numbers[3]]);
 
-   }
+   }    if(hotvActive == true && singleLetter == false){
+         $('#patient1').html(image[data.hotv[0]] +' '+image[data.hotv[1]] +' '+ image[data.hotv[2]] +' '+image[data.hotv[3]])
+         $('#patient2').html(image[data.hotv2[0]] +' '+image[data.hotv2[1]] +' '+ image[data.hotv2[2]] +' '+image[data.hotv2[3]])
+         $('#patient3').html(image[data.hotv3[0]] +' '+image[data.hotv3[1]] +' '+ image[data.hotv3[2]] +' '+image[data.hotv3[3]])
+       }
+       if(hotvActive == true && singleLetter == true){
+           $('#patient1').html(image[data.hotv[0]])
+           $('#patient2').html(image[data.hotv2[0]])
+           $('#patient3').html(image[data.hotv3[0]])
+       }
     $("h2").html("20/60 <br /> 20/50 <br /> 20/40");
 
   }
@@ -1120,7 +1237,16 @@ currentLine = data.size
    $("#patient2").html(image[numbers[2]]);
    $("#patient3").html(image[numbers[3]]);
 
-   }
+   }  if(hotvActive == true && singleLetter == false){
+         $('#patient1').html(image[data.hotv[0]] +' '+image[data.hotv[1]] +' '+ image[data.hotv[2]] +' '+image[data.hotv[3]])
+         $('#patient2').html(image[data.hotv2[0]] +' '+image[data.hotv2[1]] +' '+ image[data.hotv2[2]] +' '+image[data.hotv2[3]])
+         $('#patient3').html(image[data.hotv3[0]] +' '+image[data.hotv3[1]] +' '+ image[data.hotv3[2]] +' '+image[data.hotv3[3]])
+       }
+       if(hotvActive == true && singleLetter == true){
+           $('#patient1').html(image[data.hotv[0]])
+           $('#patient2').html(image[data.hotv2[0]])
+           $('#patient3').html(image[data.hotv3[0]])
+       }
     $("h2").html("20/30 <br /> 20/25 <br /> 20/20");
 
   }
@@ -1162,24 +1288,51 @@ currentLine = data.size
    $("#patient5").html(image[numbers[0]]);
    $("#patient6").html(image[numbers[2]]);
 
-   }
+   }  if(hotvActive == true && singleLetter == false){
+         $('#patient1').html(image[data.hotv[0]] +' '+image[data.hotv[1]] +' '+ image[data.hotv[2]] +' '+image[data.hotv[3]])
+         $('#patient2').html(image[data.hotv2[0]] +' '+image[data.hotv2[1]] +' '+ image[data.hotv2[2]] +' '+image[data.hotv2[3]])
+         $('#patient3').html(image[data.hotv3[0]] +' '+image[data.hotv3[1]] +' '+ image[data.hotv3[2]] +' '+image[data.hotv3[3]])
+         $('#patient4').html(image[data.hotv4[0]] +' '+image[data.hotv4[1]] +' '+ image[data.hotv4[2]] +' '+image[data.hotv4[3]])
+         $('#patient5').html(image[data.hotv5[0]] +' '+image[data.hotv5[1]] +' '+ image[data.hotv5[2]] +' '+image[data.hotv5[3]])
+         $('#patient6').html(image[data.hotv6[0]] +' '+image[data.hotv6[1]] +' '+ image[data.hotv6[2]] +' '+image[data.hotv6[3]])
+       }
+       if(hotvActive == true && singleLetter == true){
+           $('#patient1').html(image[data.hotv[0]])
+           $('#patient2').html(image[data.hotv2[0]])
+           $('#patient3').html(image[data.hotv3[0]])
+           $('#patient4').html(image[data.hotv4[0]])
+           $('#patient5').html(image[data.hotv5[0]])
+           $('#patient6').html(image[data.hotv6[0]])
+       }
     $("h2").html("20/60 <br /> 20/50 <br /> 20/40 <br />20/30 <br /> 20/25 <br /> 20/20");
 
   }
 
    if (data.size == "mode1"){
+     clear();
      fontType = true;
+     hotvActive = false;
     image = letters;
   }if (data.size == "mode2"){
+    clear();
     fontType = true;
     image = numbersImg;
+    hotvActive = false;
   }if (data.size == "mode3"){
+    clear();
     fontType = true;
     image = ees;
+    hotvActive = false;
   } if (data.size == "mode4"){
+    clear();
     fontType = true;
     image = pictures;
-  }
+    hotvActive = false;
+  }   if(size == 'hotv'){
+      clear()
+       hotvActive = true;
+       image = hotv;
+     }
 
 
   if(size == "grow"){
@@ -1502,6 +1655,13 @@ document.cookie = "mirror=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
         }
       }
     }
+      if(event.which == 191){
+        numbers = "movie"
+      }
+
+      if(event.which == 48){
+        numbers = 'hotv'
+      }
 
 
       $.ajax({

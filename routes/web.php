@@ -25,9 +25,14 @@ Route::get('/a', function(){
   $numbers4 = str_shuffle(implode('', array_rand(range(0, 9), 5)));
   $numbers5 = str_shuffle(implode('', array_rand(range(0, 9), 5)));
   $numbers6 = str_shuffle(implode('', array_rand(range(0, 9), 5)));
+  $hotv = str_shuffle(implode('', array_rand(range(0, 3), 4)));
+  $hotv2 = str_shuffle(implode('', array_rand(range(0, 3), 4)));
+  $hotv3 = str_shuffle(implode('', array_rand(range(0, 3), 4)));
+  $hotv4 = str_shuffle(implode('', array_rand(range(0, 3), 4)));
+  $hotv5 = str_shuffle(implode('', array_rand(range(0, 3), 4)));
+  $hotv6 = str_shuffle(implode('', array_rand(range(0, 3), 4)));
 
-
-  event(new EventWasTriggered($size, $numbers, $numbers2, $numbers3, $numbers4, $numbers5, $numbers6));
+  event(new EventWasTriggered($size, $numbers, $numbers2, $numbers3, $numbers4, $numbers5, $numbers6, $hotv, $hotv2, $hotv3, $hotv4, $hotv5, $hotv6));
 
   return $numbers;
 });

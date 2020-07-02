@@ -335,6 +335,20 @@ button:active{
 #refresh{
 	top: 10px;
 	right: 10px;
+  width: 30px;
+  height: 30px;
+	position: absolute;
+	background-image: linear-gradient(to right, #8e0202 , #bf0000);
+	color: white;
+	border: none;
+	border-radius: 5px;
+}
+
+#movie{
+	top: 60px;
+  width: 30px;
+  height:30px;
+	right: 10px;
 	position: absolute;
 	background-image: linear-gradient(to right, #8e0202 , #bf0000);
 	color: white;
@@ -457,19 +471,22 @@ small{
 				<button class="modeButton singleButtons modeButtonActive" id="singleLetter" data-size = "mode1" >Letters</button>
 				<button class="modeButton singleButtons" id="number" data-size = "mode2">Numbers</button>
 				<button class="modeButton singleButtons" id="tumblingE" data-size = "mode3">Tumbling E</button>
+        <button class="singleButtons modeButton" id="colorPlates" data-size="colorPlates">Ishihara</button>
       </div>
           <div class="row justify-content-center col-sm-3 col-md-3 col-lg-3">
 				<button class="modeButton singleButtons" id="picture" data-size = "mode4">LEA</button>
 				<button class="modeButton singleButtons" id="duochrome" data-size = "duochrome">DuoChrome</button>
 				<button class="modeButton singleButtons" id="mute" data-size = "mute">Mute</button>
+        <button class="modeButton singleButtons" id="hotv" data-size="hotv">HOTV</button>
 				</div>
 			</div>
 
 			<div class="lineHolder">
 				<button class="singleButtons singleFilter" id="singleFilter" data-size="singleFilter">1</button>
         <button class="singleButtons retinoscopy" id="retinoscopy" data-size="retinoscopy">RS</button>
-        <button class="singleButtons colorPlates" id="colorPlates" data-size="colorPlates">CP</button>
+        {{-- <button class="singleButtons colorPlates" id="colorPlates" data-size="colorPlates">CP</button> --}}
 				<button class="singleButtons" id="refresh" data-size="refresh">R</button>
+        <button class="singleButtons" id="movie" data-size="movie">MV</button>
 				<div class="lineContent text">
              <p id="line1" class="soloLine singleButtons" data-size="solo1"></p>
              <p id="line2" class="soloLine singleButtons" data-size="solo2"></p>
@@ -526,6 +543,7 @@ small{
 				<button class="modeButton singleButtons"  data-clicker="18" id="groupFour" data-size = "302520" style="border: 5px solid #810815">30/25/20</button>
 				<button class="modeButton singleButtons"  data-clicker="19" id="groupSix" data-size = "6020" style="border: 5px solid #810815">60-20</button>
 				</div>
+
       </div>
         <div id="colorHolder">
           <div class="row justify-content-center col-6 col-sm-6 col-md-6 col-lg-6">
@@ -800,5 +818,6 @@ small{
   <script src="{{asset('js/app.js')}}"></script>
 
 	<script type="text/javascript" src="/js/main2.js"></script>
+
 </body>
 </html>
